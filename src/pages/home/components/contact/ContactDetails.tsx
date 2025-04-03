@@ -1,4 +1,3 @@
-// src/components/ContactDetails.tsx
 import SectionHeaderAndDescription from '../../../../commons/sections/SectionHeaderAndDescription';
 import { Crosshair, Envelope, Telephone } from 'react-bootstrap-icons';
 

@@ -19,5 +19,5 @@ export interface Project {
   tools?: string[];
   githubUrl?: string;
   liveDemoUrl?: string;
-  categories: ("web" | "mobile" | "design")[]; // Changed to array
+  categories: ("web" | "mobile" | "design")[];
 }

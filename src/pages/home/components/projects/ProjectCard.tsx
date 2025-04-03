@@ -25,6 +25,7 @@ const ProjectCard: React.FC<Project> = ({
         width="100%"
         height={300}
         className="bg-neutral w-full min-h-[300px] object-cover"
+        aria-label={name}
       />
       <div className="flex flex-col gap-6 p-4">
         <div className="flex flex-col gap-2">

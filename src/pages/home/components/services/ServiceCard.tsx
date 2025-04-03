@@ -19,6 +19,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         width={'100%'}
         height={200}
         className="bg-neutral min-h-[150px]"
+        aria-label={ServiceCard.name}
       />
       <div className="flex flex-col gap-1 px-2 md:px-4 pb-3">
         <h3>{name}</h3>

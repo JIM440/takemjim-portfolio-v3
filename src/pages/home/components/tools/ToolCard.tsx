@@ -15,6 +15,7 @@ const ToolCard: React.FC<ToolCardProps> = ({ name, imageUrl }) => {
           width={40}
           height={40}
           style={{ maxHeight: '100%' }}
+          aria-label={name}
         />
       </div>
       <p className="font-semibold text-sm">{name}</p>

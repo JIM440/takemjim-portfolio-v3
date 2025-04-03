@@ -65,7 +65,7 @@ const TestimonialList: React.FC<TestimonialListProps> = ({ testimonials }) => {
             !canScrollLeft ? 'opacity-50 cursor-default' : ''
           }`}
           onClick={scrollLeft}
-          disabled={!canScrollLeft} // Disable button if not able to scroll left
+          disabled={!canScrollLeft}
         >
           <ChevronLeft className="text-black" size={24} />
         </button>
@@ -74,7 +74,7 @@ const TestimonialList: React.FC<TestimonialListProps> = ({ testimonials }) => {
             !canScrollRight ? 'opacity-50 cursor-default' : ''
           }`}
           onClick={scrollRight}
-          disabled={!canScrollRight} // Disable button if not able to scroll right
+          disabled={!canScrollRight}
         >
           <ChevronRight className="text-black" size={24} />
         </button>
