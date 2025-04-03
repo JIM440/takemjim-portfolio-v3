@@ -1,0 +1,126 @@
+@import 'tailwindcss';
+@import 'swiper/css/pagination';
+@import 'swiper/css/scrollbar';
+@import 'swiper/css';
+@import 'swiper/css/effect-coverflow';
+
+@theme {
+  --color-white: #fefefe;
+  --color-black: #0d0d0d;
+  --color-black-700: #000000a1;
+  --color-neutral: #eeeeee;
+}
+
+@layer base {
+  [data-theme='dark'] {
+    --color-white: #1d1d1d;
+    --color-black: #e2e2e2;
+    --color-black-700: #ffffff8f;
+    --color-neutral: #313131;
+  }
+
+  * {
+    font-family: 'Josefin Sans', sans-serif;
+  }
+
+  body {
+    background-color: var(--color-white);
+    color: var(--color-black);
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  h1 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 120%; /* 48px */
+  }
+
+  h2 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 120%; /* 57.6px */
+  }
+  h3 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 130%; /* 41.6px */
+  }
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%; /* 27px */
+  }
+
+  @media (min-width: 700px) {
+    h1 {
+      font-size: 56px;
+    }
+    h2 {
+      font-size: 48px;
+    }
+    h3 {
+      font-size: 28px;
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+
+  .section-wrapper {
+    padding: 48px 5%;
+    margin: 0 auto;
+    max-width: 2000px;
+  }
+
+  @media (min-width: 500px) {
+    .section-wrapper {
+      padding: 80px 5%;
+    }
+  }
+
+  @media (min-width: 900px) {
+    .section-wrapper {
+      padding: 112px 5%;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    text-align: center;
+    color: var(--color-black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  a {
+    font-size: 16px;
+  }
+
+  .scroll-bar-small,
+  .testimonial-container {
+    scrollbar-width: thin;
+  }
+
+  /* For Webkit browsers (Chrome, Safari) */
+  .scroll-bar-small::-webkit-scrollbar,
+  .testimonial-container::-webkit-scrollbar {
+    width: 6px;
+  }
+  .scroll-bar-small::-webkit-scrollbar-thumb,
+  .testimonial-container::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+  }
+}
+
+@layer components {
+  /* .p-tag{
+
+    } */
+}
