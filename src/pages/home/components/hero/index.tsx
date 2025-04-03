@@ -6,7 +6,7 @@ import { ArrowRight } from 'react-bootstrap-icons';
 const Hero = () => {
   return (
     <Section id="home">
-      <div className="grid grid-cols-none gap-8 items-center min-[780px]:grid-cols-2 min-[780px]:gap-12 lg:gap-16">
+      <div className="grid grid-cols-none gap-8 items-center min-[780px]:grid-cols-2 min-[780px]:gap-12 lg:gap-16  lg:mt-[-40px]">
         <div className="flex flex-col gap-3 md:gap-4">
           <h1>Transforming Ideas into Functional Products</h1>
           <p>
@@ -14,7 +14,7 @@ const Hero = () => {
             user-friendly applications that deliver both functionality and great
             design.
           </p>
-          <a href="#projects" className="mt-1">
+          <a href="#projects" className="mt-1 self-start">
             <Button
               title={`What I've Built`}
               icon={
