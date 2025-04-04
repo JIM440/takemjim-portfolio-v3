@@ -64,7 +64,7 @@ const projects: Project[] = [
     id: 11,
     name: 'Cost Estimate',
     description:
-      'A mobile application for calculating building estimates for various components or from foundation to roofing. Includes calculation and guide screens.',
+      'A mobile application for calculating building estimates for various components or from foundation to roofing.',
     media: [CostEstimate],
     servicesRendered: ['Mobile Development', 'UI/UX Design'],
     tools: ['React', 'React Native'],
@@ -88,7 +88,7 @@ const projects: Project[] = [
     id: 10,
     name: 'Tech Explorer',
     description:
-      'A mobile application to showcase tech startups, student clubs, and events in BUEA. Includes calculation and guide screens.',
+      'A mobile application to showcase tech startups, student clubs, and events in BUEA.',
     media: [TechExplorer],
     servicesRendered: ['UI/UX Design', 'Design Thinking'],
     tools: ['Figma', 'Figjam', 'Google Docs'],
@@ -99,7 +99,7 @@ const projects: Project[] = [
     id: 12,
     name: 'Relief Radar',
     description:
-      'A mobile app for disaster management system, where users can report disasters, request for help, and also connect with emergency responders around the globe. Includes reporting and guide screens.',
+      'A mobile app for disaster management system, where users can report disasters, request for help, and also connect with emergency responders around the globe.',
     media: [ReliefRadar],
     servicesRendered: ['Mobile Development', 'Web Development'],
     tools: ['Ionic', 'React', 'CSS'],

@@ -61,41 +61,43 @@ const ProjectCard: React.FC<Project> = ({
           {/* Conditionally render buttons if at least one link exists */}
           {hasLinks && (
             <div className="flex flex-col gap-2 min-[370px]:flex-row min-[370px]:gap-4 md:gap-6">
-              <a
-                href={githubUrl || '#'}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={!githubUrl ? 'pointer-events-none' : ''}
-              >
-                <Button
-                  title="GitHub"
-                  disabled={!githubUrl}
-                  icon={
-                    <Github
-                      size={14}
-                      className="ml-2 text-inherit self-baseline"
-                    />
-                  }
-                />
-              </a>
-              <a
-                href={liveDemoUrl || '#'}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={!liveDemoUrl ? 'pointer-events-none' : ''}
-              >
-                <Button
-                  title="Live Demo"
-                  variant="outlined"
-                  disabled={!liveDemoUrl}
-                  icon={
-                    <BoxArrowUpRight
-                      size={14}
-                      className="ml-2 text-inherit self-baseline"
-                    />
-                  }
-                />
-              </a>
+              {githubUrl && (
+                <a
+                  href={githubUrl || '#'}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={!githubUrl ? 'pointer-events-none' : ''}
+                >
+                  <Button
+                    title="GitHub"
+                    icon={
+                      <Github
+                        size={14}
+                        className="ml-2 text-inherit self-baseline"
+                      />
+                    }
+                  />
+                </a>
+              )}
+              {liveDemoUrl && (
+                <a
+                  href={liveDemoUrl || '#'}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={!liveDemoUrl ? 'pointer-events-none' : ''}
+                >
+                  <Button
+                    title="Live Demo"
+                    variant="outlined"
+                    icon={
+                      <BoxArrowUpRight
+                        size={14}
+                        className="ml-2 text-inherit self-baseline"
+                      />
+                    }
+                  />
+                </a>
+              )}
             </div>
           )}
           <p className="text-xs text-black-700 mt-[-8px]">{date}</p>

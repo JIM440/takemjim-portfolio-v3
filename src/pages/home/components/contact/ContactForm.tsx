@@ -1,9 +1,10 @@
 // src/components/ContactForm.tsx
 
 import React, { useState } from 'react';
-import Button from '../../../../commons/buttons'; // Import the Button component
+import Button from '../../../../commons/buttons';
 import Input from '../../../../commons/input';
 import ScrollReveal from '../../../../commons/scroll-reveal/ScrollReveal';
+import { ArrowRight } from 'react-bootstrap-icons';
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -53,7 +54,13 @@ const ContactForm: React.FC = () => {
           value={formData.request}
           onChange={handleChange}
         />
-        <Button className="w-full" title="Submit Request" />
+        <Button
+          className="w-full"
+          title="Submit Request"
+          icon={
+            <ArrowRight size={16} className="ml-2 text-inherit self-baseline" />
+          }
+        />
       </form>
     </ScrollReveal>
   );
