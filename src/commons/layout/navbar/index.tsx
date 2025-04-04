@@ -18,10 +18,10 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="section-wrapper py-3 border-b-1 border-neutral sticky top-0 bg-white">
+    <nav className="section-wrapper py-3 border-b-1 border-neutral sticky top-0 bg-white z-[1000]">
       <div className="flex justify-between items-center">
         {/* Logo */}
-        <a href="#home">
+        <a href="/">
           <div>
             <img
               src={theme === 'dark' ? logoDark : logo}
@@ -35,13 +35,15 @@ const Navbar = () => {
 
         {/* Desktop Navigation Links */}
         <ul className="hidden md:flex space-x-6 mx-auto">
-          {['Home', 'About Me', 'Services', 'Projects'].map((item) => (
-            <li key={item}>
-              <a
-                href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
-                className="text-black text-sm lg:text-lg"
-              >
-                {item}
+          {[
+            { name: 'Home', path: '/#home' },
+            { name: 'About Me', path: '/#about' },
+            { name: 'Services', path: '/#services' },
+            { name: 'Projects', path: '/#projects' },
+          ].map((item) => (
+            <li key={item.name}>
+              <a href={item.path} className="text-black text-sm lg:text-lg">
+                {item.name}
               </a>
             </li>
           ))}
@@ -79,28 +81,34 @@ const Navbar = () => {
           </button>
         </div>
         <ul className="flex flex-col items-center justify-center h-full space-y-6 text-lg">
-          {['Home', 'About Me', 'Services', 'Projects'].map((item) => (
-            <li key={item}>
+          {[
+            { name: 'Home', path: '/#home' },
+            { name: 'About Me', path: '/#about' },
+            { name: 'Services', path: '/#services' },
+            { name: 'Projects', path: '/#projects' },
+          ].map((item) => (
+            <li key={item.name}>
               <a
-                href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
+                href={`${item.path}`}
                 className="text-black"
                 onClick={closeMobileMenu}
               >
-                {item}
+                {item.name}
               </a>
             </li>
           ))}
           <li>
-            <a href="/cv.pdf">
+            <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">
               <Button
                 title="Download CV"
                 variant="outlined"
                 className="w-[200px]"
+                onClick={closeMobileMenu}
               />
             </a>
           </li>
           <li>
-            <a href="#contact">
+            <a href="#contact" onClick={closeMobileMenu}>
               <Button title="Contact" className="w-[200px]" />
             </a>
           </li>

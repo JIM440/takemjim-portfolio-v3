@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Button from '../../../../commons/buttons'; // Import the Button component
 import Input from '../../../../commons/input';
+import ScrollReveal from '../../../../commons/scroll-reveal/ScrollReveal';
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -21,45 +22,40 @@ const ContactForm: React.FC = () => {
     }));
   };
 
-  const handleSubmit = () => {
-    console.log('Form submitted:', formData);
-    alert('submit');
-    // Here you would usually send the form data to a backend or API
-  };
-
   return (
-    <form onSubmit={(e) => e.preventDefault()} className="flex flex-col gap-4">
-      <Input
-        label="Name"
-        type="text"
-        placeholder="Enter your name"
-        name="name"
-        value={formData.name}
-        onChange={handleChange}
-      />
-      <Input
-        label="Email"
-        type="email"
-        placeholder="Enter your email"
-        name="email"
-        value={formData.email}
-        onChange={handleChange}
-      />
-      <Input
-        label="How can I help you?"
-        type="textarea"
-        placeholder="Enter your request here"
-        name="request"
-        value={formData.request}
-        onChange={handleChange}
-      />
-      <Button
-        className="w-full"
-        title="Submit Request"
-        onClick={handleSubmit}
-        disabled={!formData.email || !formData.name || !formData.request}
-      />
-    </form>
+    <ScrollReveal>
+      <form
+        className="flex flex-col gap-4"
+        action="https://formspree.io/f/xyyrdogv"
+        method="POST"
+      >
+        <Input
+          label="Name"
+          type="text"
+          placeholder="Enter your name"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+        />
+        <Input
+          label="Email"
+          type="email"
+          placeholder="Enter your email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+        />
+        <Input
+          label="How can I help you?"
+          type="textarea"
+          placeholder="Enter your request here"
+          name="request"
+          value={formData.request}
+          onChange={handleChange}
+        />
+        <Button className="w-full" title="Submit Request" />
+      </form>
+    </ScrollReveal>
   );
 };
 

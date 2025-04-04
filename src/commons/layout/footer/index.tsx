@@ -14,15 +14,23 @@ import useTheme from '../../../hooks/useTheme';
 
 // Social media icons using React Bootstrap Icons
 const socialIcons = [
-  { name: 'LinkedIn', icon: Linkedin, link: 'https://linkedin.com/takem-jim' },
-  { name: 'Twitter', icon: TwitterX, link: 'https://x.com/takem-jim' },
+  {
+    name: 'LinkedIn',
+    icon: Linkedin,
+    link: 'https://www.linkedin.com/in/takemjim/',
+  },
+  { name: 'Twitter', icon: TwitterX, link: 'https://x.com/takemjim' },
   { name: 'Facebook', icon: Facebook, link: 'https://facebook.com' },
   {
     name: 'Instagram',
     icon: Instagram,
     link: 'https://instagram.com/takemjim43',
   },
-  // { name: 'YouTube', icon: Youtube, link: 'https://youtube.com' },
+  // {
+  //   name: 'YouTube',
+  //   icon: Youtube,
+  //   link: 'https://studio.youtube.com/channel/UCUwvq0ka_bfT8kMxQO-XhdA/videos',
+  // },
 ];
 
 const Footer = () => {
@@ -37,7 +45,11 @@ const Footer = () => {
           <p className="text-black mb-4">
             Subscribe to my newsletter for the latest updates and features.
           </p>
-          <div className="flex gap-2">
+          <form
+            className="flex gap-2"
+            action="https://formspree.io/f/xeqylnjb"
+            method="POST"
+          >
             <Input
               name="email"
               type="email"
@@ -52,7 +64,7 @@ const Footer = () => {
               variant="outlined"
               className="mt-1 mb-4 py-2.5"
             />
-          </div>
+          </form>
           <p className="text-black text-sm mt-2">
             By subscribing, you consent to my
             <a href="/privacy-policy" className="text-sm text-black underline">
@@ -66,18 +78,19 @@ const Footer = () => {
         <div className="max-w-[400px] min-w-[200px]">
           <h3 className="text-lg mb-4">Quick Links:</h3>
           <ul className="space-y-2">
-            {['Home', 'About Me', 'My Services', 'Projects', 'Contact Me'].map(
-              (link) => (
-                <li key={link}>
-                  <a
-                    href={`/${link.toLowerCase().replace(/\s+/g, '-')}`}
-                    className="text-black text-sm"
-                  >
-                    {link}
-                  </a>
-                </li>
-              )
-            )}
+            {[
+              { name: 'Home', path: 'home' },
+              { name: 'About Me', path: 'about' },
+              { name: 'My Services', path: 'services' },
+              { name: 'Projects', path: 'projects' },
+              { name: 'Contact Me', path: 'contact' },
+            ].map((link) => (
+              <li key={link.name}>
+                <a href={`#${link.path}`} className="text-black text-sm">
+                  {link.name}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -85,16 +98,25 @@ const Footer = () => {
         <div className="max-w-[400px] min-w-[200px]">
           <h3 className="text-lg mb-4">Code & Content:</h3>
           <ul className="space-y-2">
-            {['GitHub', 'Bitbucket', 'Blog'].map((item) => (
+            {['GitHub', 'Bitbucket'].map((item) => (
               <li key={item}>
                 <a
                   href={`https://${item.toLowerCase()}.com/jim440`}
+                  target="_blank"
                   className="font-medium text-black text-sm"
                 >
                   {item}
                 </a>
               </li>
             ))}
+            <li>
+              <a
+                href={`https://takemjim.com/blog`}
+                className="font-medium text-black text-sm"
+              >
+                Blog
+              </a>
+            </li>
           </ul>
         </div>
 
@@ -108,6 +130,7 @@ const Footer = () => {
                 <a
                   key={social.name}
                   href={social.link}
+                  target="_blank"
                   className="text-black text-sm flex gap-2 items-center"
                   aria-label={social.name}
                 >

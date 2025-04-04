@@ -1,4 +1,5 @@
 import React from 'react';
+import ScrollReveal from '../scroll-reveal/ScrollReveal';
 
 interface SectionHeaderAndDescriptionProps {
   title: string;
@@ -9,10 +10,14 @@ const SectionHeaderAndDescription: React.FC<
   SectionHeaderAndDescriptionProps
 > = ({ title, description }) => {
   return (
-    <div className="flex flex-col gap-2 md:gap-3">
-      <h2>{title}</h2>
-      {description && <p className="max-w-[768px]">{description}</p>}
-    </div>
+    <ScrollReveal>
+      <div className="flex flex-col gap-2 md:gap-3">
+        <h2>{title}</h2>
+        {description && (
+          <p className="max-w-[768px] text-justify">{description}</p>
+        )}
+      </div>
+    </ScrollReveal>
   );
 };
 

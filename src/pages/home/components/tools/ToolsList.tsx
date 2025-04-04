@@ -1,5 +1,6 @@
 import React from 'react';
 import ToolCard from './ToolCard';
+import ScrollReveal from '../../../../commons/scroll-reveal/ScrollReveal';
 
 interface Tool {
   id: string;
@@ -13,11 +14,13 @@ interface ToolsListProps {
 
 const ToolsList: React.FC<ToolsListProps> = ({ tools }) => {
   return (
-    <div className="flex flex-wrap gap-6">
-      {tools.map((tool) => (
-        <ToolCard key={tool.id} name={tool.name} imageUrl={tool.imageUrl} />
-      ))}
-    </div>
+    <ScrollReveal>
+      <div className="flex flex-wrap gap-6">
+        {tools.map((tool) => (
+          <ToolCard key={tool.id} name={tool.name} imageUrl={tool.imageUrl} />
+        ))}
+      </div>
+    </ScrollReveal>
   );
 };
 

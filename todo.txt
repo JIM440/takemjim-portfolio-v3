@@ -1,8 +1,0 @@
-- form submission
-- give all long texts aligh justify
-- scroll reveal
-- links
-- Change project services to skill applied
-- Portfolio 
-- Scroll reveal
-- Update footer links
