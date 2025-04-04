@@ -69,7 +69,7 @@ const Footer = () => {
             By subscribing, you consent to my
             <a href="/privacy-policy" className="text-sm text-black underline">
               Privacy Policy
-            </a>{' '}
+            </a>
             and receive updates.
           </p>
         </div>
@@ -98,7 +98,7 @@ const Footer = () => {
         <div className="max-w-[400px] min-w-[200px]">
           <h3 className="text-lg mb-4">Code & Content:</h3>
           <ul className="space-y-2">
-            {['GitHub', 'Bitbucket'].map((item) => (
+            {['GitHub'].map((item) => (
               <li key={item}>
                 <a
                   href={`https://${item.toLowerCase()}.com/jim440`}
