@@ -3,7 +3,7 @@ import useTheme from '../../../hooks/useTheme';
 import logo from '../../../assets/icons/logo.png';
 import logoDark from '../../../assets/icons/logo-dark.png';
 import Button from '../../buttons';
-import { BrightnessHigh, Moon, List, X } from 'react-bootstrap-icons';
+import { BrightnessHigh, List, X } from 'react-bootstrap-icons';
 
 const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
@@ -19,7 +19,7 @@ const Navbar = () => {
 
   return (
     <nav className="section-wrapper py-3 border-b-1 border-neutral sticky top-0 bg-white">
-      <div className="container flex justify-between items-center">
+      <div className="flex justify-between items-center">
         {/* Logo */}
         <a href="#home">
           <div>
@@ -49,16 +49,12 @@ const Navbar = () => {
 
         {/* Right Side: Contact Button and Theme Toggle (Desktop) */}
         <div className="flex items-center gap-4">
+          <button onClick={toggleTheme} aria-label="Toggle theme">
+            <BrightnessHigh className="text-black" size={22} />
+          </button>
           <a href="#contact" className="hidden md:flex">
             <Button title="Contact" />
           </a>
-          <button onClick={toggleTheme} aria-label="Toggle theme">
-            {theme === 'dark' ? (
-              <Moon className="text-black" size={22} />
-            ) : (
-              <BrightnessHigh className="text-black" size={22} />
-            )}
-          </button>
 
           {/* Hamburger Menu Icon (Mobile) */}
           <button

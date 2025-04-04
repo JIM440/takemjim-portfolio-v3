@@ -20,11 +20,11 @@ const ProjectCard: React.FC<Project> = ({
     <div className="flex flex-col gap-6 border border-neutral h-auto">
       {/* Display the first image from the media array */}
       <img
-        src={media[0] || 'https://via.placeholder.com/300'}
+        src={media[0]}
         alt={name}
         width="100%"
         height={300}
-        className="bg-neutral w-full min-h-[300px] object-cover"
+        className="w-full min-h-[190px] object-cover md:object-contain"
         aria-label={name}
       />
       <div className="flex flex-col gap-6 p-4">
@@ -33,7 +33,7 @@ const ProjectCard: React.FC<Project> = ({
           <p>{description}</p>
           {/* Services Rendered */}
           <div className="mt-2">
-            <p className="text-sm font-semibold">Services:</p>
+            <p className="text-sm font-semibold">Skills applied:</p>
             <ul className="flex flex-wrap gap-2">
               {servicesRendered.map((stuff, index) => (
                 <li key={index} className="text-xs py-1 px-2 bg-neutral">

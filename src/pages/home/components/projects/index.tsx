@@ -2,24 +2,17 @@ import ProjectList from './ProjectList';
 import Section from '../../../../commons/sections/Section';
 import SectionHeaderAndDescription from '../../../../commons/sections/SectionHeaderAndDescription';
 import { Project } from '../../../../types';
+import Internship from '../../../../assets/images/internship-platform.png';
+import CostEstimate from '../../../../assets/images/cost-estimate.png';
+import Medik from '../../../../assets/images/medik.png';
+import TechExplorer from '../../../../assets/images/tech-explorer.png';
+import ReliefRadar from '../../../../assets/images/relief-radar.png';
+import CSSLibrary from '../../../../assets/images/css-library.png';
+import AGM from '../../../../assets/images/agm.png';
+import ASEND from '../../../../assets/images/asend.png';
+import DataWarehouse from '../../../../assets/images/data-warehouse.png';
 
 const projects: Project[] = [
-  {
-    id: 7,
-    name: 'Internship Management System',
-    description:
-      'A platform to manage and streamline the internship process for a start up called InchTechs.',
-    media: [
-      'https://example.com/internship-management-image1.jpg',
-      'https://example.com/internship-management-image2.jpg',
-    ],
-    servicesRendered: ['Web Development', 'UI/UX Design', 'API Integration'],
-    tools: ['React', 'MUI', 'MySQL', 'Express Js', 'socket.io'],
-    categories: ['web'],
-    date: '2024-08-05 - 2024-12-15',
-    githubUrl: 'https://github.com/username/internship-management-system', // Added
-    liveDemoUrl: 'https://internship-management-system.example.com', // Added
-  },
   {
     id: 8,
     name: 'FET SPACE - School Management System',
@@ -30,7 +23,7 @@ const projects: Project[] = [
       'https://example.com/fet-space-image2.jpg',
     ],
     servicesRendered: [
-      'UI Design',
+      'UI/UX Design',
       'Full-Stack Development',
       'Mobile Development',
       'API Integration',
@@ -47,18 +40,45 @@ const projects: Project[] = [
     ],
     categories: ['web', 'mobile'],
     date: '2025-04-01 - 2025-07-10',
-    githubUrl: 'https://github.com/username/fet-space',
-    liveDemoUrl: 'https://fet-space.example.com',
+    // githubUrl: 'https://github.com/username/fet-space',
+    // liveDemoUrl: 'https://fet-space.example.com',
+  },
+  {
+    id: 7,
+    name: 'Internship Management System',
+    description:
+      'A platform to manage and streamline the internship process for a start up called InchTechs.',
+    media: [Internship],
+    servicesRendered: [
+      'UI/UX Design',
+      'Full-Stack Web Development',
+      'API Integration',
+    ],
+    tools: ['React', 'MUI', 'MySQL', 'Express Js', 'socket.io'],
+    categories: ['web'],
+    date: '2024-08-05 - 2024-12-15',
+    // githubUrl: 'https://github.com/username/internship-management-system',
+    // liveDemoUrl: 'https://internship-management-system.example.com',
+  },
+  {
+    id: 11,
+    name: 'Cost Estimate',
+    description:
+      'A mobile application for calculating building estimates for various components or from foundation to roofing. Includes calculation and guide screens.',
+    media: [CostEstimate],
+    servicesRendered: ['Mobile Development', 'UI/UX Design'],
+    tools: ['React', 'React Native'],
+    categories: ['mobile'],
+    date: '2024-03-20 - 2024-06-20',
+    // githubUrl: 'https://github.com/username/cost-estimate',
+    // liveDemoUrl: 'https://cost-estimate.example.com',
   },
   {
     id: 9,
     name: 'Medik - Telemedicine Application',
     description:
       'A Telemedicine Application where users can book appointments with doctors and also receive consultation results and tests.',
-    media: [
-      'https://example.com/medik-image1.jpg',
-      'https://example.com/medik-image2.jpg',
-    ],
+    media: [Medik],
     servicesRendered: ['UI/UX Design', 'Prototyping'],
     tools: ['Figma'],
     categories: ['design'],
@@ -69,124 +89,78 @@ const projects: Project[] = [
     name: 'Tech Explorer',
     description:
       'A mobile application to showcase tech startups, student clubs, and events in BUEA. Includes calculation and guide screens.',
-    media: [
-      'https://example.com/tech-explorer-image1.jpg',
-      'https://example.com/tech-explorer-image2.jpg',
-      'https://example.com/tech-explorer-calculation.jpg',
-      'https://example.com/tech-explorer-guide.jpg',
-    ],
-    servicesRendered: [
-      'UI/UX Design',
-      // 'Prototyping',
-      // 'Wireframing',
-      'Design Thinking',
-    ],
+    media: [TechExplorer],
+    servicesRendered: ['UI/UX Design', 'Design Thinking'],
     tools: ['Figma', 'Figjam', 'Google Docs'],
     categories: ['design'],
     date: '2024-05-20 - 2024-06-20',
-  },
-  {
-    id: 11,
-    name: 'Cost Estimate',
-    description:
-      'A mobile application for calculating building estimates for various components or from foundation to roofing. Includes calculation and guide screens.',
-    media: [
-      'https://example.com/cost-estimate-image1.jpg',
-      'https://example.com/cost-estimate-image2.jpg',
-      'https://example.com/cost-estimate-calculation.jpg',
-      'https://example.com/cost-estimate-guide.jpg',
-    ],
-    servicesRendered: ['Mobile Development', 'UI/UX Design'],
-    tools: ['React', 'React Native'],
-    categories: ['mobile'],
-    date: '2024-03-20 - 2024-06-20',
-    githubUrl: 'https://github.com/username/cost-estimate',
-    liveDemoUrl: 'https://cost-estimate.example.com',
   },
   {
     id: 12,
     name: 'Relief Radar',
     description:
       'A mobile app for disaster management system, where users can report disasters, request for help, and also connect with emergency responders around the globe. Includes reporting and guide screens.',
-    media: [
-      'https://example.com/relief-radar-image1.jpg',
-      'https://example.com/relief-radar-image2.jpg',
-      'https://example.com/relief-radar-reporting.jpg',
-      'https://example.com/relief-radar-guide.jpg',
-    ],
+    media: [ReliefRadar],
     servicesRendered: ['Mobile Development', 'Web Development'],
     tools: ['Ionic', 'React', 'CSS'],
     categories: ['web', 'mobile'],
     date: '2024-03-20 - 2024-06-20',
-    githubUrl: 'https://github.com/username/relief-radar',
-    liveDemoUrl: 'https://relief-radar.example.com',
+    // githubUrl: 'https://github.com/username/relief-radar',
+    // liveDemoUrl: 'https://relief-radar.example.com',
   },
   {
     id: 13,
     name: 'CSS LIBRARY',
     description:
       'This is a light weight CSS library, similar to Tailwind CSS, where users can design websites using utility classes.',
-    media: [
-      'https://example.com/css-library-image1.jpg',
-      'https://example.com/css-library-image2.jpg',
-    ],
-    servicesRendered: ['Frontend Development'],
+    media: [CSSLibrary],
+    servicesRendered: ['Frontend Web Development'],
     tools: ['HTML', 'CSS', 'JS', 'SASS'],
     categories: ['web'],
     date: '2023-09-15',
-    githubUrl: 'https://github.com/username/css-library',
-    liveDemoUrl: 'https://css-library.example.com',
+    githubUrl: 'https://github.com/JIM440/CSS-Library-with-SASS',
+    liveDemoUrl: 'https://jim440.github.io/CSS-Library-with-SASS/',
   },
   {
     id: 14,
     name: 'AGM WEBSITE',
     description: 'A multipage website for the Apostolic Gospel Mission Kumba.',
-    media: [
-      'https://example.com/agm-website-image1.jpg',
-      'https://example.com/agm-website-image2.jpg',
-    ],
-    servicesRendered: ['Web Development'],
+    media: [AGM],
+    servicesRendered: ['Frontend Web Development'],
     tools: ['React', 'SASS'],
     categories: ['web'],
     date: '2024-02-15',
-    githubUrl: 'https://github.com/username/agm-website',
-    liveDemoUrl: 'https://agm-website.example.com',
+    githubUrl: 'https://github.com/JIM440/AGM-Website',
+    liveDemoUrl: 'https://agm-website-react.vercel.app/',
   },
   {
     id: 15,
     name: 'ASEND WEBSITE',
     description:
       'A multipage website for a prep group that prepares students for professional exams.',
-    media: [
-      'https://example.com/asend-website-image1.jpg',
-      'https://example.com/asend-website-image2.jpg',
-    ],
-    servicesRendered: ['Web Development'],
+    media: [ASEND],
+    servicesRendered: ['Frontend Web Development'],
     tools: ['React', 'SASS'],
     categories: ['web'],
     date: '2023-09-15',
-    githubUrl: 'https://github.com/username/asend-website',
-    liveDemoUrl: 'https://asend-website.example.com',
+    githubUrl: 'https://github.com/JIM440/ASEND-Website',
+    liveDemoUrl: 'https://asend-website.vercel.app/',
   },
   {
     id: 16,
     name: 'Three Tier Application and Data Warehouse',
     description:
-      'A data warehouse used to analyze data from a chat application (auth | realtime communication | data cleaning and etc.).',
-    media: [
-      'https://example.com/three-tier-app-image1.jpg',
-      'https://example.com/three-tier-app-image2.jpg',
-    ],
+      'A data warehouse used to analyze data from a chat application. Key features include: authentication, realtime communication, data cleaning etc.',
+    media: [DataWarehouse],
     servicesRendered: [
-      'Backend Development',
-      'Data Analysis',
+      'Full-Stack Development',
+      'Data Analysis and Cleaning',
       'Database Design',
     ],
     tools: ['HTML', 'CSS', 'Chart JS', 'Node.js', 'Express', 'MongoDB'],
     categories: ['web'],
     date: '2023-09-15',
-    githubUrl: 'https://github.com/username/three-tier-app',
-    liveDemoUrl: 'https://three-tier-app.example.com',
+    githubUrl: 'https://github.com/JIM440/Data-Analysis-Projects',
   },
 ];
 

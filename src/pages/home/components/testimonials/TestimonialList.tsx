@@ -61,22 +61,22 @@ const TestimonialList: React.FC<TestimonialListProps> = ({ testimonials }) => {
       </div>
       <div className="flex gap-2 justify-end mt-4">
         <button
-          className={`p-2 flex items-center justify-baseline bg-neutral ${
+          className={`py-1 px-1.5 flex items-center justify-baseline bg-neutral ${
             !canScrollLeft ? 'opacity-50 cursor-default' : ''
           }`}
           onClick={scrollLeft}
           disabled={!canScrollLeft}
         >
-          <ChevronLeft className="text-black" size={24} />
+          <ChevronLeft className="text-black" size={20} />
         </button>
         <button
-          className={`p-2 flex items-center justify-baseline bg-neutral ${
+          className={`py-1 px-1.5 flex items-center justify-baseline bg-neutral ${
             !canScrollRight ? 'opacity-50 cursor-default' : ''
           }`}
           onClick={scrollRight}
           disabled={!canScrollRight}
         >
-          <ChevronRight className="text-black" size={24} />
+          <ChevronRight className="text-black" size={20} />
         </button>
       </div>
     </div>

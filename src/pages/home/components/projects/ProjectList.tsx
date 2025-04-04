@@ -26,7 +26,7 @@ const ProjectList: React.FC<ProjectListProps> = ({ projects }) => {
   return (
     <div>
       {/* Filter buttons */}
-      <div className="flex gap-4 md:gap-6 overflow-x-auto mb-8 scroll-bar-small w-full pb-4">
+      <div className="flex gap-2 md:gap-6 mb-8 overflow-x-auto scroll-bar-small pb-4">
         {Categories.map((category) => (
           <Button
             key={category}

@@ -29,7 +29,7 @@ const Footer = () => {
   const { theme } = useTheme();
   const [email, setEmail] = useState('');
   return (
-    <footer className="section-wrapper py-4 border-t border-neutral">
+    <footer className="section-wrapper py-4">
       <div className="flex flex-wrap gap-8 justify-between">
         {/* Logo and Newsletter Section */}
         <div className="max-w-[500px]">

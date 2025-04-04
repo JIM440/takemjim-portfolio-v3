@@ -1,32 +1,34 @@
 import Section from '../../../../commons/sections/Section';
 import SectionHeaderAndDescription from '../../../../commons/sections/SectionHeaderAndDescription';
-import placeholder from '../../../../assets/images/placeholder.png';
+import author1 from '../../../../assets/images/author-1.jpeg';
+import author2 from '../../../../assets/images/author-2.jpg';
+import author3 from '../../../../assets/images/author-3.jpeg';
 import TestimonialList from './TestimonialList';
 
 const testimonials = [
   {
     id: '1',
-    clientName: 'John Doe',
+    clientName: 'Dr. Eric Paul',
     clientCompany: 'Acme Corp / CEO',
     content: 'Outstanding service and attention to detail. Highly recommended!',
     rating: 5,
-    image: placeholder,
+    image: author1,
   },
   {
     id: '2',
-    clientName: 'Jane Smith',
+    clientName: 'Mrs. Ayuk Mayelle Smith',
     clientCompany: 'Tech Solutions / CTO',
     content: 'Delivered exceptional results on time and within budget.',
     rating: 4.5,
-    image: placeholder,
+    image: author2,
   },
   {
     id: '3',
-    clientName: 'Michael Brown',
+    clientName: 'Candace Owens',
     clientCompany: 'Innovate Inc / Product Manager',
     content: 'Great communication and technical expertise. Would hire again!',
     rating: 5,
-    image: placeholder,
+    image: author3,
   },
 ];
 const Testimonials = () => {
