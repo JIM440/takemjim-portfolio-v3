@@ -1,31 +1,47 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import TestimonialCard from './TestimonialCard';
 import { Testimonial } from '../../../../types';
-import { ChevronLeft, ChevronRight } from 'react-bootstrap-icons';
+import { ArrowLeftSquare, ArrowRightSquare } from 'react-bootstrap-icons';
 
 interface TestimonialListProps {
   testimonials: Testimonial[];
 }
 
 const TestimonialList: React.FC<TestimonialListProps> = ({ testimonials }) => {
-  const testimonialContainerRef = useRef<HTMLDivElement | null>(null); // Reference to the container
-  const [canScrollLeft, setCanScrollLeft] = useState(false); // State to track if left scroll is possible
-  const [canScrollRight, setCanScrollRight] = useState(true); // State to track if right scroll is possible
+  const testimonialContainerRef = useRef<HTMLDivElement | null>(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(false);
+  const [isOverflowing, setIsOverflowing] = useState(false);
 
-  const handleScroll = () => {
+  // Check overflow and scroll position
+  const checkScrollState = () => {
     if (testimonialContainerRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } =
         testimonialContainerRef.current;
-      // Enable/disable buttons based on scroll position
-      setCanScrollLeft(scrollLeft > 0); // Left scroll possible if scrollLeft is greater than 0
-      setCanScrollRight(scrollLeft < scrollWidth - clientWidth); // Right scroll possible if scrollLeft is less than the scrollable width
+      const hasOverflow = scrollWidth > clientWidth;
+
+      setIsOverflowing(hasOverflow);
+      setCanScrollLeft(hasOverflow && scrollLeft > 0);
+      setCanScrollRight(hasOverflow && scrollLeft < scrollWidth - clientWidth);
     }
   };
+
+  // Handle scroll event
+  const handleScroll = () => {
+    checkScrollState();
+  };
+
+  // Initial check and window resize listener
+  useEffect(() => {
+    checkScrollState(); // Check on mount
+    window.addEventListener('resize', checkScrollState);
+    return () => window.removeEventListener('resize', checkScrollState);
+  }, [testimonials]); // Re-check when testimonials change
 
   const scrollLeft = () => {
     if (testimonialContainerRef.current) {
       testimonialContainerRef.current.scrollBy({
-        left: -300, // Scroll left by a fixed amount
+        left: -300,
         behavior: 'smooth',
       });
     }
@@ -34,7 +50,7 @@ const TestimonialList: React.FC<TestimonialListProps> = ({ testimonials }) => {
   const scrollRight = () => {
     if (testimonialContainerRef.current) {
       testimonialContainerRef.current.scrollBy({
-        left: 300, // Scroll right by a fixed amount
+        left: 300,
         behavior: 'smooth',
       });
     }
@@ -59,26 +75,30 @@ const TestimonialList: React.FC<TestimonialListProps> = ({ testimonials }) => {
           />
         ))}
       </div>
-      <div className="flex gap-2 justify-end mt-4">
-        <button
-          className={`py-1 px-1.5 flex items-center justify-baseline bg-neutral ${
-            !canScrollLeft ? 'opacity-50 cursor-default' : ''
-          }`}
-          onClick={scrollLeft}
-          disabled={!canScrollLeft}
-        >
-          <ChevronLeft className="text-black" size={20} />
-        </button>
-        <button
-          className={`py-1 px-1.5 flex items-center justify-baseline bg-neutral ${
-            !canScrollRight ? 'opacity-50 cursor-default' : ''
-          }`}
-          onClick={scrollRight}
-          disabled={!canScrollRight}
-        >
-          <ChevronRight className="text-black" size={20} />
-        </button>
-      </div>
+      {isOverflowing && (
+        <div className="flex gap-2 justify-end mt-4">
+          <button
+            className={`p-1 ${
+              !canScrollLeft ? 'opacity-50 cursor-default' : ''
+            }`}
+            onClick={scrollLeft}
+            disabled={!canScrollLeft}
+            aria-label="Scroll testimonials left"
+          >
+            <ArrowLeftSquare className="text-black" size={20} />
+          </button>
+          <button
+            className={`p-1 ${
+              !canScrollRight ? 'opacity-50 cursor-default' : ''
+            }`}
+            onClick={scrollRight}
+            disabled={!canScrollRight}
+            aria-label="Scroll testimonials right"
+          >
+            <ArrowRightSquare className="text-black" size={20} />
+          </button>
+        </div>
+      )}
     </div>
   );
 };
