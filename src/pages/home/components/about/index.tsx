@@ -21,7 +21,7 @@ const About = () => {
               stay ahead in the fast-evolving tech landscape.
             </p>
             <div className="flex lg:justify-end items-center gap-2">
-              <a href="#contact">
+              <a href="/#contact">
                 <Button title="Contact Me" />
               </a>
               <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">

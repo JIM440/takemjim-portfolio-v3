@@ -2,6 +2,7 @@ import ProjectList from './ProjectList';
 import Section from '../../../../commons/sections/Section';
 import SectionHeaderAndDescription from '../../../../commons/sections/SectionHeaderAndDescription';
 import { Project } from '../../../../types';
+import FetSpace from '../../../../assets/images/fet-space.png';
 import Internship from '../../../../assets/images/internship-platform.png';
 import CostEstimate from '../../../../assets/images/cost-estimate.png';
 import Medik from '../../../../assets/images/medik.png';
@@ -17,11 +18,8 @@ const projects: Project[] = [
     id: 8,
     name: 'FET SPACE - School Management System',
     description:
-      'An integrated system for FET that enhances school management with features like assignment submission and faculty announcements, offering a mobile app for students and a web app for teachers.',
-    media: [
-      'https://example.com/fet-space-image1.jpg',
-      'https://example.com/fet-space-image2.jpg',
-    ],
+      'An integrated system for FET that enhances school management with features like assignment submission and faculty announcements, offering a mobile app for students and a web app for teachers (coming soon).',
+    media: [FetSpace],
     servicesRendered: [
       'UI/UX Design',
       'Full-Stack Development',
