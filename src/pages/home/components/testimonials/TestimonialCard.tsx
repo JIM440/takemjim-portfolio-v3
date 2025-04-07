@@ -52,6 +52,7 @@ const TestimonialCard: React.FC<Testimonial> = ({
             src={image}
             alt={clientName}
             className="w-12 h-12 rounded-full object-cover"
+            aria-label={clientName}
           />
           <div className="flex flex-col">
             <span className="font-bold">{clientName}</span>
