@@ -33,7 +33,7 @@ const Hero = () => {
           <div>
             <img
               src={takemjim}
-              width={'100%'}
+              width={353}
               height={400}
               className="bg-neutral h-auto min-h-[200px]"
               alt="Takem Jim"
