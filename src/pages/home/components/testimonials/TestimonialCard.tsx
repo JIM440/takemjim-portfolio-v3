@@ -53,6 +53,7 @@ const TestimonialCard: React.FC<Testimonial> = ({
             alt={clientName}
             className="w-12 h-12 rounded-full object-cover"
             aria-label={clientName}
+            loading="lazy"
           />
           <div className="flex flex-col">
             <span className="font-bold">{clientName}</span>
