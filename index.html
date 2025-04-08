@@ -3,20 +3,37 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/logo.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta name="description"
-    content="Takem Jim, Full Stack Developer & UI Designer. I transform ideas into functional, user-friendly applications.">
+    content="Takem Jim, Full Stack Developer & UI Designer. I transform ideas into functional, user-friendly applications." />
+
+  <!-- Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Preload fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
-    rel="stylesheet">
+    rel="stylesheet" as="style">
+
+  <!-- Favicon and icons -->
+  <link rel="icon" href="/logo.png" type="image/png" sizes="16x16 32x32 48x48">
+
+  <!-- SEO and Social Media Optimization -->
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Takem Jim - Full Stack Developer & UI Designer">
+  <meta property="og:description" content="Transforming ideas into functional, user-friendly applications.">
+  <!-- <meta property="og:image" content="/logo.png"> -->
+  <!-- <meta property="og:url" content="https://your-website-url.com"> -->
+  <!-- <meta name="twitter:card" content="summary_large_image"> -->
+  <!-- <meta name="twitter:creator" content="@yourtwitterhandle"> -->
+
+  <!-- Title -->
   <title>Home | Takem Jim - Portfolio</title>
 </head>
 
 <body>
   <div id="root"></div>
-  <script type="module" src="/src/main.tsx"></script>
+  <script type="module" src="/src/main.tsx" defer></script>
 </body>
 
 </html>
