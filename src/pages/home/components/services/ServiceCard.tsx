@@ -18,8 +18,8 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         <img
           src={imageUrl}
           alt={name}
-          width={'100%'}
-          height={200}
+          width={527}
+          height={312}
           className="bg-neutral min-h-[150px]"
           aria-label={ServiceCard.name}
           loading="lazy"

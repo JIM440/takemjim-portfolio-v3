@@ -1,7 +1,7 @@
 import Section from '../../../../commons/sections/Section';
 import SectionHeaderAndDescription from '../../../../commons/sections/SectionHeaderAndDescription';
 import ui from '../../../../assets/images/ui-design.png';
-import web from '../../../../assets/images/web.jpeg';
+import web from '../../../../assets/images/web.jpg';
 import mobile from '../../../../assets/images/mobile.jpg';
 import ServiceList from './ServiceList';
 

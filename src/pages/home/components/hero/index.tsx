@@ -1,5 +1,5 @@
 import Section from '../../../../commons/sections/Section';
-import takemjim from '../../../../assets/images/takem-jim-3.jpg';
+import takemjim from '../../../../assets/images/takem-jim.jpg';
 import Button from '../../../../commons/buttons';
 import { ArrowRight } from 'react-bootstrap-icons';
 import ScrollReveal from '../../../../commons/scroll-reveal/ScrollReveal';
