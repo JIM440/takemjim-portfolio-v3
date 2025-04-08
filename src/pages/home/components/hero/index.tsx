@@ -33,9 +33,9 @@ const Hero = () => {
           <div>
             <img
               src={takemjim}
-              width={353}
-              height={400}
-              className="bg-neutral h-auto min-h-[200px]"
+              width={176}
+              height={200}
+              className="bg-neutral w-[100%] h-auto min-h-[200px]"
               alt="Takem Jim"
               aria-label="takem jim"
             />

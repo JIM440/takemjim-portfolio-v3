@@ -20,7 +20,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           alt={name}
           width={253}
           height={150}
-          className="bg-neutral min-h-[150px]"
+          className="bg-neutral min-h-[150px] w-[100%] h-auto"
           aria-label={ServiceCard.name}
           loading="lazy"
         />
