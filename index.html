@@ -13,10 +13,15 @@
 
   <!-- Preload fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
-    rel="stylesheet" as="style">
+    rel="stylesheet">
 
   <!-- Favicon and icons -->
   <link rel="icon" href="/logo.png" type="image/png" sizes="16x16 32x32 48x48">
+
+  <!-- Preload images -->
+  <link rel="preload" href="/src/assets/images/takem-jim.jpg" as="image">
+  <link rel="preload" href="/src/assets/icons/logo-dark.png" as="image">
+  <link rel="preload" href="/src/assets/icons/logo.png" as="image">
 
   <!-- SEO and Social Media Optimization -->
   <meta name="robots" content="index, follow">
@@ -33,7 +38,7 @@
 
 <body>
   <div id="root"></div>
-  <script type="module" src="/src/main.tsx" defer></script>
+  <script type="module" src="/src/main.tsx"></script>
 </body>
 
 </html>
