@@ -27,6 +27,7 @@ const Navbar = () => {
               src={theme === 'dark' ? logoDark : logo}
               alt="logo"
               width={84}
+              height={36}
               style={{ fontFamily: "'Dancing Script', cursive" }}
               className="text-2xl font-bold"
             />
@@ -51,10 +52,14 @@ const Navbar = () => {
 
         {/* Right Side: Contact Button and Theme Toggle (Desktop) */}
         <div className="flex items-center gap-4">
-          <button onClick={toggleTheme} aria-label="Toggle theme">
+          <button
+            onClick={toggleTheme}
+            aria-label="Toggle theme"
+            title="switch theme"
+          >
             <BrightnessHigh className="text-black" size={22} />
           </button>
-          <a href="#contact" className="hidden md:flex">
+          <a href="/#contact" className="hidden md:flex">
             <Button title="Contact" />
           </a>
 
@@ -62,7 +67,7 @@ const Navbar = () => {
           <button
             onClick={toggleMobileMenu}
             className="md:hidden"
-            aria-label="Open menu"
+            aria-label="open menu"
           >
             <List className="text-black" size={28} />
           </button>
@@ -76,7 +81,7 @@ const Navbar = () => {
         }`}
       >
         <div className="flex justify-end p-4">
-          <button onClick={toggleMobileMenu} aria-label="Close menu">
+          <button onClick={toggleMobileMenu} aria-label="close menu">
             <X className="text-black" size={28} />
           </button>
         </div>
@@ -108,7 +113,7 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <a href="#contact" onClick={closeMobileMenu}>
+            <a href="/#contact" onClick={closeMobileMenu}>
               <Button title="Contact" className="w-[200px]" />
             </a>
           </li>

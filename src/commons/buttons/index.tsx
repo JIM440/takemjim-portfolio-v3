@@ -41,11 +41,10 @@ const Button: React.FC<ButtonProps> = ({
       className={`${baseClasses} ${variantClasses} ${className}`}
       onClick={onClick}
       disabled={disabled}
-      aria-label={title}
+      aria-label={title.toLowerCase()}
     >
       {title} {/* Button text or children */}
       {icon ? icon : <></>}
-      {/* Render icon if passed */}
     </button>
   );
 };

@@ -41,7 +41,14 @@ const Footer = () => {
       <div className="flex flex-wrap gap-8 justify-between">
         {/* Logo and Newsletter Section */}
         <div className="max-w-[500px]">
-          <img src={theme === 'dark' ? logoDark : logo} height={36} />
+          <img
+            src={theme === 'dark' ? logoDark : logo}
+            height={36}
+            width={84}
+            alt="logo"
+            style={{ fontFamily: "'Dancing Script', cursive" }}
+            className="text-2xl font-bold"
+          />
           <p className="text-black mb-4">
             Subscribe to my newsletter for the latest updates and features.
           </p>
@@ -66,11 +73,11 @@ const Footer = () => {
             />
           </form>
           <p className="text-black text-sm mt-2">
-            By subscribing, you consent to my
-            <a href="/privacy-policy" className="text-sm text-black underline">
-              Privacy Policy
-            </a>{' '}
-            and receive updates.
+            By subscribing, you consent to my&nbsp;
+            <a href="/#privacy-policy" className="text-sm text-black underline">
+              privacy policy
+            </a>
+            &nbsp;and receive updates.
           </p>
         </div>
 
@@ -86,7 +93,7 @@ const Footer = () => {
               { name: 'Contact Me', path: 'contact' },
             ].map((link) => (
               <li key={link.name}>
-                <a href={`#${link.path}`} className="text-black text-sm">
+                <a href={`/#${link.path}`} className="text-black text-sm">
                   {link.name}
                 </a>
               </li>
@@ -98,7 +105,7 @@ const Footer = () => {
         <div className="max-w-[400px] min-w-[200px]">
           <h3 className="text-lg mb-4">Code & Content:</h3>
           <ul className="space-y-2">
-            {['GitHub', 'Bitbucket'].map((item) => (
+            {['GitHub'].map((item) => (
               <li key={item}>
                 <a
                   href={`https://${item.toLowerCase()}.com/jim440`}

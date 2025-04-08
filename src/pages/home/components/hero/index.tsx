@@ -36,7 +36,7 @@ const Hero = () => {
               width={'100%'}
               height={400}
               className="bg-neutral h-auto min-h-[200px]"
-              alt="Tamekm Jim"
+              alt="Takem Jim"
               aria-label="takem jim"
             />
           </div>
