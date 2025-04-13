@@ -22,8 +22,9 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
       setTheme(storedTheme);
       updateBodyDataTheme(storedTheme);
     } else {
-      localStorage.setItem('theme', 'light');
-      document.body.setAttribute('data-theme', 'light');
+      localStorage.setItem('theme', 'dark');
+      setTheme('dark');
+      document.body.setAttribute('data-theme', 'dark');
     }
   }, []);
 
