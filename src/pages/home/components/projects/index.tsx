@@ -28,7 +28,7 @@ const projects: Project[] = [
     ],
     tools: ['React Native', 'Expo', 'SQLite'],
     categories: ['mobile'],
-    date: '2024-11-01 – 2025-02-10',
+    date: '2025-09-01 – 2025-10-30',
     liveDemoUrl: 'https://note-loom-landing-page.vercel.app/',
   },
   {
