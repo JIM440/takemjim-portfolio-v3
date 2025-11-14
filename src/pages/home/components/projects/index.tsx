@@ -12,13 +12,30 @@ import CSSLibrary from '../../../../assets/images/css-library.png';
 import AGM from '../../../../assets/images/agm.png';
 import ASEND from '../../../../assets/images/asend.png';
 import DataWarehouse from '../../../../assets/images/data-warehouse.png';
+import NoteLoom from '../../../../assets/images/note-loom.webp';
 
 const projects: Project[] = [
+  {
+    id: 17,
+    name: 'Note Loom – Personal Knowledge Workspace',
+    description:
+      'A note-taking mobile application that allows users to capture, organize, and refine their thoughts using a rich blog-style editor. Includes smart folder organization, favorites, and an intelligent search powered by SQLite.',
+    media: [NoteLoom],
+    servicesRendered: [
+      'Mobile Development',
+      'UI/UX Design',
+      'Offline-First Architecture',
+    ],
+    tools: ['React Native', 'Expo', 'SQLite'],
+    categories: ['mobile'],
+    date: '2024-11-01 – 2025-02-10',
+    liveDemoUrl: 'https://note-loom-landing-page.vercel.app/',
+  },
   {
     id: 8,
     name: 'FET SPACE - School Management System',
     description:
-      'An integrated system for FET that enhances school management with features like assignment submission and faculty announcements, offering a mobile app for students and a web app for teachers (coming soon).',
+      'An integrated system for FET that enhances school management with features like assignment submission and faculty announcements, offering a mobile app for students and a web app for teachers.',
     media: [FetSpace],
     servicesRendered: [
       'UI/UX Design',
