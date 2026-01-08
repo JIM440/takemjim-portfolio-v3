@@ -138,8 +138,17 @@ const Footer = () => {
                   key={social.name}
                   href={social.link}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="text-black text-sm flex gap-2 items-center"
                   aria-label={social.name}
+                  onClick={() => {
+                    if (typeof window !== 'undefined' && window.gtag) {
+                      window.gtag('event', 'social_click', {
+                        platform: social.name,
+                        url: social.link,
+                      });
+                    }
+                  }}
                 >
                   <IconComponent />
                   <p className="mr-1 font-medium">{social.name}</p>

@@ -5,6 +5,7 @@ import Button from '../../../../commons/buttons';
 import Input from '../../../../commons/input';
 import ScrollReveal from '../../../../commons/scroll-reveal/ScrollReveal';
 import { ArrowRight } from 'react-bootstrap-icons';
+import { trackFormSubmit } from '../../../../utils/analytics';
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -23,12 +24,18 @@ const ContactForm: React.FC = () => {
     }));
   };
 
+  const handleSubmit = (e: React.FormEvent) => {
+    // Track form submission
+    trackFormSubmit('contact_form');
+  };
+
   return (
     <ScrollReveal>
       <form
         className="flex flex-col gap-4"
         action="https://formspree.io/f/xyyrdogv"
         method="POST"
+        onSubmit={handleSubmit}
       >
         <Input
           label="Name"

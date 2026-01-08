@@ -37,7 +37,8 @@ const Hero = () => {
               height={200}
               className="bg-neutral w-[100%] h-auto min-h-[200px]"
               alt="Takem Jim"
-              aria-label="takem jim"
+              title="Takem Jim - Full Stack Developer & UI Designer"
+              aria-label="Takem Jim - Full Stack Developer & UI Designer from Cameroon"
             />
           </div>
         </ScrollReveal>
