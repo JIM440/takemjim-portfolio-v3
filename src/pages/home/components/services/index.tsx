@@ -2,7 +2,7 @@ import Section from '../../../../commons/sections/Section';
 import SectionHeaderAndDescription from '../../../../commons/sections/SectionHeaderAndDescription';
 import ui from '../../../../assets/images/ui-design.png';
 import web from '../../../../assets/images/web.jpg';
-import mobile from '../../../../assets/images/mobile.jpg';
+import Internship from '../../../../assets/images/internship-platform.png';
 import ServiceList from './ServiceList';
 
 const services = [
@@ -22,7 +22,7 @@ const services = [
     id: '3',
     name: 'Mobile Development',
     description: 'Developing seamless mobile applications for all platforms.',
-    imageUrl: mobile,
+    imageUrl: Internship,
   },
 ];
 

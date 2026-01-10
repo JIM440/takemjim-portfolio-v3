@@ -103,7 +103,7 @@ const Navbar = () => {
             </li>
           ))}
           <li>
-            <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">
+            <a href="/takem-jim-cv.pdf" target="_blank" rel="noopener noreferrer">
               <Button
                 title="Download CV"
                 variant="outlined"
