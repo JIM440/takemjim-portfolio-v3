@@ -24,9 +24,10 @@ const ContactForm: React.FC = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (_e: React.FormEvent) => {
     // Track form submission
     trackFormSubmit('contact_form');
+    // Form will submit naturally via formspree action attribute
   };
 
   return (
