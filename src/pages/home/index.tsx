@@ -11,7 +11,7 @@ import ScrollToTop from '../../commons/scroll/ScrollToTop';
 
 const HomePage = () => {
   return (
-    <>
+    <main style={{ overflowX: 'hidden' }}>
       <Navbar />
       <Hero />
       <About />
@@ -22,7 +22,7 @@ const HomePage = () => {
       <Contact />
       <Footer />
       <ScrollToTop />
-    </>
+    </main>
   );
 };
 

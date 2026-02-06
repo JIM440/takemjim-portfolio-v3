@@ -2,7 +2,7 @@ import Section from '../../../../commons/sections/Section';
 import SectionHeaderAndDescription from '../../../../commons/sections/SectionHeaderAndDescription';
 import author1 from '../../../../assets/images/author-1.jpeg';
 import author2 from '../../../../assets/images/author-2.jpg';
-import author3 from '../../../../assets/images/author-3.jpeg';
+import author3 from '../../../../assets/images/author-3.jpg';
 import TestimonialList from './TestimonialList';
 
 const testimonials = [
@@ -24,7 +24,7 @@ const testimonials = [
   },
   {
     id: '3',
-    clientName: 'Betrand Agbot',
+    clientName: 'Betrand Agbor',
     clientCompany: 'Innovate Inc / Product Manager',
     content: 'Great communication and technical expertise. Would hire again!',
     rating: 5,

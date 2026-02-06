@@ -33,6 +33,7 @@
     background-size: 18px 18px;
     background-position: 0 0;
     background-attachment: fixed;
+    overflow-x: hidden;
   }
 
   textarea {
