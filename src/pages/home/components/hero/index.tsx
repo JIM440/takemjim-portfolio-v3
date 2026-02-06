@@ -7,7 +7,10 @@ import ScrollReveal from '../../../../commons/scroll-reveal/ScrollReveal';
 const Hero = () => {
   return (
     <Section id="home">
-      <div className="grid grid-cols-none gap-8 items-center min-[780px]:grid-cols-2 min-[780px]:gap-12 lg:gap-16  lg:mt-[-40px]">
+      <div className="relative">
+        <div className="accent-blob accent-blob--1" />
+        <div className="accent-blob accent-blob--2" />
+        <div className="grid grid-cols-none gap-8 items-center min-[780px]:grid-cols-2 min-[780px]:gap-12 lg:gap-16 lg:mt-[-40px] relative z-[1]">
         <ScrollReveal>
           <div className="flex flex-col gap-3 md:gap-4">
             <h1>Transforming Ideas into Functional Products</h1>
@@ -42,6 +45,7 @@ const Hero = () => {
             />
           </div>
         </ScrollReveal>
+        </div>
       </div>
     </Section>
   );

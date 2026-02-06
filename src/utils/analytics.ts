@@ -17,7 +17,7 @@ declare global {
       targetId: string | object,
       config?: object
     ) => void;
-    dataLayer: any[];
+    dataLayer: unknown[];
   }
 }
 
@@ -29,7 +29,7 @@ export const initGA = (measurementId: string) => {
   window.dataLayer = window.dataLayer || [];
 
   // Define gtag function
-  function gtag(...args: any[]) {
+  function gtag(...args: unknown[]) {
     window.dataLayer.push(args);
   }
 
@@ -56,7 +56,7 @@ export const trackPageView = (path: string, title?: string, measurementId?: stri
 export const trackEvent = (
   eventName: string,
   eventParams?: {
-    [key: string]: any;
+    [key: string]: unknown;
   }
 ) => {
   if (typeof window === 'undefined' || !window.gtag) return;

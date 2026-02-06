@@ -8,7 +8,6 @@ import CostEstimate from '../../../../assets/images/cost-estimate.png';
 import Medik from '../../../../assets/images/medik.png';
 import TechExplorer from '../../../../assets/images/tech-explorer.png';
 import ReliefRadar from '../../../../assets/images/relief-radar.png';
-import CSSLibrary from '../../../../assets/images/css-library.png';
 import AGM from '../../../../assets/images/agm.png';
 import ASEND from '../../../../assets/images/asend.png';
 import DataWarehouse from '../../../../assets/images/data-warehouse.png';
@@ -124,19 +123,6 @@ const projects: Project[] = [
     // liveDemoUrl: 'https://relief-radar.example.com',
   },
   {
-    id: 13,
-    name: 'CSS LIBRARY',
-    description:
-      'This is a light weight CSS library, similar to Tailwind CSS, where users can design websites using utility classes.',
-    media: [CSSLibrary],
-    servicesRendered: ['Frontend Web Development'],
-    tools: ['HTML', 'CSS', 'JS', 'SASS'],
-    categories: ['web'],
-    date: '2023-09-15',
-    githubUrl: 'https://github.com/JIM440/CSS-Library-with-SASS',
-    liveDemoUrl: 'https://jim440.github.io/CSS-Library-with-SASS/',
-  },
-  {
     id: 14,
     name: 'AGM WEBSITE',
     description: 'A multipage website for the Apostolic Gospel Mission Kumba with a comprehensive admin panel that allows content management for the frontend, enabling easy updates to articles, testimonies, videos, and other dynamic content.',
@@ -145,7 +131,6 @@ const projects: Project[] = [
     tools: ['Next Js', 'Express Js', 'MongoDB'],
     categories: ['web'],
     date: '2024-02-15',
-    githubUrl: 'https://github.com/JIM440/agm-online-website',
     liveDemoUrl: 'https://agm-online-website.vercel.app/',
   },
   {
@@ -158,8 +143,6 @@ const projects: Project[] = [
     tools: ['React', 'SASS'],
     categories: ['web'],
     date: '2023-09-15',
-    githubUrl: 'https://github.com/JIM440/ASEND-Website',
-    liveDemoUrl: 'https://asend-website.vercel.app/',
   },
   {
     id: 16,
@@ -175,19 +158,21 @@ const projects: Project[] = [
     tools: ['HTML', 'CSS', 'Chart JS', 'Node.js', 'Express', 'MongoDB'],
     categories: ['web'],
     date: '2023-09-15',
-    githubUrl: 'https://github.com/JIM440/Data-Analysis-Projects',
   },
 ];
 
 const Projects = () => {
   return (
     <Section id="projects">
-      <div className="flex flex-col gap-10 lg:gap-16">
+      <div className="relative">
+        <div className="accent-blob accent-blob--2" />
+        <div className="flex flex-col gap-10 lg:gap-16 relative z-[1]">
         <SectionHeaderAndDescription
           title="Solutions I’ve Crafted"
           description="Explore the projects where I’ve transformed ideas into reality, creating impactful solutions tailored to meet real-world needs."
         />
         <ProjectList projects={projects} />
+        </div>
       </div>
     </Section>
   );

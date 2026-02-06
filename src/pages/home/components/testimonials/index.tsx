@@ -24,7 +24,7 @@ const testimonials = [
   },
   {
     id: '3',
-    clientName: 'Candace Owens',
+    clientName: 'Betrand Agbot',
     clientCompany: 'Innovate Inc / Product Manager',
     content: 'Great communication and technical expertise. Would hire again!',
     rating: 5,

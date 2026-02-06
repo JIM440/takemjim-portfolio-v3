@@ -5,14 +5,20 @@
   --color-black: #0d0d0d;
   --color-black-700: #000000a1;
   --color-neutral: #eeeeee;
+  --pattern-color: rgba(0, 0, 0, 0.03);
+  --blob-color-1: rgba(0, 0, 0, 0.08);
+  --blob-color-2: rgba(0, 0, 0, 0.06);
 }
 
 @layer base {
   [data-theme='dark'] {
-    --color-white: #1d1d1d;
-    --color-black: #e2e2e2;
+    --color-white: #121212;
+    --color-black: #f0f0f0;
     --color-black-700: #ffffff8f;
-    --color-neutral: #313131;
+    --color-neutral: #2a2a2a;
+    --pattern-color: rgba(255, 255, 255, 0.04);
+    --blob-color-1: rgba(255, 255, 255, 0.12);
+    --blob-color-2: rgba(255, 255, 255, 0.08);
   }
 
   * {
@@ -23,6 +29,10 @@
   body {
     background-color: var(--color-white);
     color: var(--color-black);
+    background-image: radial-gradient(var(--pattern-color) 1px, transparent 1px);
+    background-size: 18px 18px;
+    background-position: 0 0;
+    background-attachment: fixed;
   }
 
   textarea {
@@ -117,7 +127,26 @@
 }
 
 @layer components {
-  /* .p-tag{
-
-    } */
+  .accent-blob {
+    position: absolute;
+    pointer-events: none;
+    filter: blur(40px);
+    opacity: 0.25;
+    z-index: 0;
+    border-radius: 9999px;
+  }
+  .accent-blob--1 {
+    width: 320px;
+    height: 320px;
+    left: -80px;
+    top: -60px;
+    background: radial-gradient(circle at center, var(--blob-color-1) 0%, transparent 65%);
+  }
+  .accent-blob--2 {
+    width: 240px;
+    height: 240px;
+    right: -60px;
+    bottom: -40px;
+    background: radial-gradient(circle at center, var(--blob-color-2) 0%, transparent 65%);
+  }
 }

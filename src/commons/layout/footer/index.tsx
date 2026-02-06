@@ -5,11 +5,9 @@ import {
   Linkedin,
   // Youtube,
 } from 'react-bootstrap-icons';
-import Input from '../../input';
 import Button from '../../buttons';
 import logo from '../../../assets/icons/logo.png';
 import logoDark from '../../../assets/icons/logo-dark.png';
-import { useState } from 'react';
 import useTheme from '../../../hooks/useTheme';
 
 // Social media icons using React Bootstrap Icons
@@ -35,7 +33,6 @@ const socialIcons = [
 
 const Footer = () => {
   const { theme } = useTheme();
-  const [email, setEmail] = useState('');
   return (
     <footer className="section-wrapper py-4">
       <div className="flex flex-wrap gap-8 justify-between">
@@ -50,35 +47,14 @@ const Footer = () => {
             className="text-2xl font-bold"
           />
           <p className="text-black mb-4">
-            Subscribe to my newsletter for the latest updates and features.
+            Have a project in mind or want to collaborate? I’d love to hear from you.
           </p>
-          <form
-            className="flex gap-2"
-            action="https://formspree.io/f/xeqylnjb"
-            method="POST"
-          >
-            <Input
-              name="email"
-              type="email"
-              placeholder="Your email here"
-              value={email}
-              onChange={(e) => {
-                setEmail(e.target.value);
-              }}
-            />
+          <a href="/#contact">
             <Button
-              title="Join"
-              variant="outlined"
+              title="Get in Touch"
               className="mt-1 mb-4 py-2.5"
             />
-          </form>
-          <p className="text-black text-sm mt-2">
-            By subscribing, you consent to my&nbsp;
-            <a href="/#privacy-policy" className="text-sm text-black underline">
-              privacy policy
-            </a>
-            &nbsp;and receive updates.
-          </p>
+          </a>
         </div>
 
         {/* Quick Links Section */}

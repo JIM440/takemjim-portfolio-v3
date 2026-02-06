@@ -39,7 +39,7 @@ const TestimonialCard: React.FC<Testimonial> = ({
 
   return (
     <ScrollReveal>
-      <div className="border border-neutral p-4 flex flex-col space-y-4 mx-auto w-[416px] min-w-[320px] h-auto">
+      <div className="border border-neutral p-4 flex flex-col space-y-4 min-w-[250px] basis-full min-[500px]:basis-1/2 min-[700px]:basis-1/3 h-auto">
         {/* Rating */}
         <div className="flex space-x-1">{renderStars(rating)}</div>
 
