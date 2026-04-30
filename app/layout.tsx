@@ -19,10 +19,10 @@ const bodyFont = Manrope({
   weight: ["300", "400", "500", "600", "700"],
 });
 
-const rootTitle = "Takem Jim- Software Developer";
+const rootTitle = "Takem Jim";
 const rootDescription =
   "I build web and mobile applications that turn ideas into real, usable products. Got a project? I can help make it happen.";
-const rootImage = "/jim/hero-og.jpg";
+const rootImage = "/jim/hero-og.png";
 
 export const viewport: Viewport = {
   width: "device-width",
