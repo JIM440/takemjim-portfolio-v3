@@ -176,7 +176,7 @@ export const projects: Project[] = [
       "REEPLS shaped a focused ecosystem for long-form posts, podcasts, topic-led streams, curated knowledge feeds, and offline reading so African creators can publish with more structure and reach.",
     services: ["Product strategy", "Mobile product design", "Content platform planning", "Frontend engineering"],
     stack: ["React Native", "Editorial workflows", "Mobile-first interface design", "Offline reading"],
-    role: "Mobile product engineer",
+    role: "Mobile developer",
     duration: "September 2025",
     spotlight: "A mobile-first African publishing product for thoughtful stories, podcasts, and curated knowledge.",
     liveUrl: "https://blog.reepls.com",
@@ -205,7 +205,7 @@ export const projects: Project[] = [
       {
         title: "Play Store screen 02",
         caption: "Second REEPLS screenshot focused on reading and multimedia story presentation.",
-        src: "/projects/reepls-shot-02.png",
+        src: "/projects/reepls-shot-02.jpg",
         frame: "mobile",
       },
       {
@@ -302,20 +302,21 @@ export const projects: Project[] = [
     category: "Web",
     year: "2024",
     summary:
-      "A platform to manage and streamline the internship process for a start up called InchTechs.",
-    builtDescription: "Web only with auth",
+      "A platform built for InchTechs to manage interns, supervisors, departments, project assignments, and the wider internship workflow.",
+    builtDescription: "Web platform with role-based access",
     challenge:
       "The internship process needed a more structured workflow for tracking participants, reducing coordination friction, and keeping communication clearer across the team.",
     outcome:
-      "The platform centralized the internship flow into one experience, making it easier to manage applications, monitor progress, and keep stakeholders aligned.",
+      "The platform centralized internship operations into one role-based experience, giving admins control over interns, supervisors, departments, and records while giving supervisors a focused panel for assigning projects and interns a space for progress updates and real-time messaging.",
     services: ["UI/UX design", "Full-stack web development", "API integration"],
     stack: ["React", "MUI", "MySQL", "Express Js", "socket.io"],
     role: "Full-stack developer",
     duration: "December 2024",
-    spotlight: "A structured internship operations platform for smoother coordination and tracking.",
+    spotlight: "A structured internship operations platform with admin and supervisor workflows.",
     heroImage: "/projects/internship-platform.png",
     images: ["/projects/internship-platform.png"],
-    whatWeMade: "manages the full intern lifecycle—from application tracking to project assignment and real-time messaging between participants and supervisors.",
+    whatWeMade:
+      "manages the full intern lifecycle, including an admin panel for interns, supervisors, departments, and records, a supervisor panel for assigning projects, and an intern panel for real-time messaging and progress updates.",
     screenshots: [],
   },
   {
@@ -333,7 +334,7 @@ export const projects: Project[] = [
       "PawTaker introduced a more human pet-care flow built around local community, visible reliability, PawPoints, and flexible care options like walks, daytime care, overnight stays, and vacation support.",
     services: ["Landing page design", "Mobile app design", "Admin panel planning", "Interaction design"],
     stack: ["React Native", "Next.js", "Admin workflows", "Trust-based marketplace UX"],
-    role: "Product designer and frontend engineer",
+    role: "Mobile and web developer",
     duration: "April 2026",
     spotlight: "A trust-led pet care product built around local help, familiar faces, and community reputation.",
     liveUrl: "https://pawtaker-web.vercel.app/",
@@ -379,7 +380,7 @@ export const projects: Project[] = [
       "The app empowered technicians to deliver professional estimates, reducing errors and providing a learning path for accurate cost calculation.",
     services: ["Mobile development", "UI/UX design"],
     stack: ["React", "React Native"],
-    role: "Mobile developer",
+    role: "UI designer and mobile developer",
     duration: "June 2024",
     spotlight: "A practical estimating app for construction planning from foundation to finish.",
     heroImage: "/projects/cost-estimate-reference.png",

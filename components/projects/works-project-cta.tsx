@@ -2,11 +2,6 @@ import Link from "next/link";
 import { profile } from "@/lib/site-data";
 
 export function WorksProjectCta() {
-  const availabilityShort =
-    profile.availability.length > 72
-      ? `${profile.availability.slice(0, 72).trim()}...`
-      : profile.availability;
-
   return (
     <section className="border-t border-(--line-strong) bg-(--bg) text-(--fg)">
       <div className="landing-container py-20 md:py-28 lg:py-32">
@@ -39,7 +34,7 @@ export function WorksProjectCta() {
               Availability
             </p>
             <p className="mt-4 font-[family-name:var(--font-body)] text-sm leading-relaxed text-(--muted) md:text-base">
-              {availabilityShort}
+              {profile.availability}
             </p>
           </div>
           <div className="border-t border-(--line-strong) pt-5 lg:border-t-0 lg:pt-0">

@@ -259,6 +259,15 @@ export function ProjectDetailView({ project, projectIndex, nextProject }: Projec
   const usePawtaker = projectUsesPawtakerScreenshotBoard(project);
   const useMinimal = projectUsesMinimalVisualCaseStudy(project);
   const showLegacyGallery = !useNoteLoom && !usePlayStrip && !usePawtaker && !useMinimal;
+  const showHeroInBuiltSection =
+    project.slug === "internship-management-system" ||
+    project.slug === "fet-space-school-management-system";
+  const walkthroughLabel =
+    project.slug === "pawtaker"
+      ? "PawTaker Walkthrough"
+      : project.slug === "internship-management-system"
+        ? "Internship Walkthrough"
+        : "Product Walkthrough";
 
   const playStripShots = usePlayStrip ? getPlayStoreStripShots(screenshots) : [];
   const reepLsShots = project.slug === "reepls" ? playStripShots.slice(0, 2) : [];
@@ -478,7 +487,7 @@ export function ProjectDetailView({ project, projectIndex, nextProject }: Projec
             <div className="flex flex-col gap-4 border-b border-[color:var(--line)] pb-10 md:flex-row md:items-end md:justify-between">
               <div>
                 <p className="font-[family-name:var(--font-body)] text-[11px] uppercase tracking-[0.24em] text-(--muted)">
-                  PawTaker Walkthrough
+                  {walkthroughLabel}
                 </p>
                 <h2 className="project-detail__h2 mt-3 not-italic">What we built</h2>
               </div>
@@ -486,6 +495,17 @@ export function ProjectDetailView({ project, projectIndex, nextProject }: Projec
                 We built a {project.builtDescription?.toLowerCase() || "product"} that {project.whatWeMade || project.summary}
               </p>
             </div>
+
+            {showHeroInBuiltSection && screenshots.length === 0 ? (
+              <div className="mt-14 w-full overflow-hidden">
+                <AppPhoto
+                  src={heroSrc}
+                  alt={project.title}
+                  className={`${heroAspect(project.slug)} w-full`}
+                  imgClassName="absolute inset-0 h-full w-full max-w-none object-cover"
+                />
+              </div>
+            ) : null}
 
             <div className="mt-16 space-y-24 md:space-y-32">
               {screenshots.map((shot, index) => (
@@ -509,6 +529,33 @@ export function ProjectDetailView({ project, projectIndex, nextProject }: Projec
                   </div>
                 </article>
               ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
+
+      {useMinimal && showHeroInBuiltSection ? (
+        <section className="project-detail__section">
+          <div className="project-detail__wrap">
+            <div className="flex flex-col gap-4 border-b border-[color:var(--line)] pb-10 md:flex-row md:items-end md:justify-between">
+              <div>
+                <p className="font-[family-name:var(--font-body)] text-[11px] uppercase tracking-[0.24em] text-(--muted)">
+                  Product Overview
+                </p>
+                <h2 className="project-detail__h2 mt-3 not-italic">What we built</h2>
+              </div>
+              <p className="max-w-xl font-[family-name:var(--font-body)] text-sm leading-relaxed text-(--muted) md:text-base">
+                We built a {project.builtDescription?.toLowerCase() || "product"} that {project.whatWeMade || project.summary}
+              </p>
+            </div>
+
+            <div className="mt-14 w-full overflow-hidden">
+              <AppPhoto
+                src={heroSrc}
+                alt={project.title}
+                className={`${heroAspect(project.slug)} w-full`}
+                imgClassName="absolute inset-0 h-full w-full max-w-none object-cover"
+              />
             </div>
           </div>
         </section>
