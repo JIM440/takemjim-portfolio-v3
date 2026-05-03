@@ -61,7 +61,7 @@ export function BlogArchiveView({ initialCategory }: { initialCategory?: string 
     setLoading(true);
     setError(false);
     try {
-      const res = await fetch("/api/blogs");
+      const res = await fetch("/api/blogs", { cache: "no-store" });
       if (res.ok) {
         const json = (await res.json()) as { blogs?: BlogArchivePost[] };
         setPosts(json.blogs || []);

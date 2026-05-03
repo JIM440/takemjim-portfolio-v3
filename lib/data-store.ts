@@ -70,7 +70,7 @@ function writeDb(data: DbSchema) {
 export const blogStore = {
   list: () => readDb().blogs,
   get: (slug: string) => readDb().blogs.find((b) => b.slug === slug),
-  create: (blog: Omit<BlogPost, "id" | "createdAt" | "updatedAt">) => {
+  create: (blog: Omit<BlogPost, "id" | "publishedAt" | "updatedAt">) => {
     const db = readDb();
     const now = new Date().toISOString();
     const newBlog: BlogPost = {
@@ -95,8 +95,10 @@ export const blogStore = {
   },
   delete: (id: string) => {
     const db = readDb();
+    const initialLength = db.blogs.length;
     db.blogs = db.blogs.filter((b) => b.id !== id);
     writeDb(db);
+    return db.blogs.length < initialLength;
   },
 };
 

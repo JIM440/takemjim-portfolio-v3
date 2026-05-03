@@ -9,9 +9,10 @@ type DialogProps = {
   description: string;
   confirmLabel?: string;
   cancelLabel?: string;
-  onConfirm: () => void;
+  onConfirm: () => void | Promise<void>;
   onCancel: () => void;
   tone?: "default" | "danger";
+  pending?: boolean;
 };
 
 export function Dialog({
@@ -23,6 +24,7 @@ export function Dialog({
   onConfirm,
   onCancel,
   tone = "default",
+  pending = false,
 }: DialogProps) {
   const [mounted, setMounted] = useState(false);
 
@@ -35,6 +37,9 @@ export function Dialog({
 
     const onKey = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
+        if (pending) {
+          return;
+        }
         onCancel();
       }
     };
@@ -48,7 +53,7 @@ export function Dialog({
       document.body.style.overflow = "";
       window.removeEventListener("keydown", onKey);
     };
-  }, [open, onCancel]);
+  }, [open, onCancel, pending]);
 
   if (!mounted || !open) {
     return null;
@@ -74,6 +79,7 @@ export function Dialog({
             <button
               type="button"
               onClick={onCancel}
+              disabled={pending}
               className="rounded-full border border-[color:var(--line)] px-5 py-2.5 text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-[color:var(--fg)]"
             >
               {cancelLabel}
@@ -82,7 +88,8 @@ export function Dialog({
           <button
             type="button"
             onClick={onConfirm}
-            className={`rounded-full px-5 py-2.5 text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-white ${
+            disabled={pending}
+            className={`rounded-full px-5 py-2.5 text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-white disabled:cursor-wait disabled:opacity-70 ${
               tone === "danger" ? "bg-[#a12222]" : "bg-[color:var(--accent)]"
             }`}
           >

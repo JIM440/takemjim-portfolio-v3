@@ -83,7 +83,7 @@ export function BlogEditor({ mode, initial }: BlogEditorProps) {
       });
 
       if (res.ok) {
-        router.push("/admin/blog");
+        router.push(`/admin/blog?refresh=${Date.now()}`);
         router.refresh();
       } else {
         const json = await res.json();

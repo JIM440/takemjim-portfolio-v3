@@ -9,8 +9,9 @@ export function useAdminApi<T>(endpoint: string) {
 
   const fetchAll = useCallback(async () => {
     setLoading(true);
+    setError(null);
     try {
-      const res = await fetch(`/api/admin/${endpoint}`);
+      const res = await fetch(`/api/admin/${endpoint}`, { cache: "no-store" });
       const json = await res.json();
       if (res.ok) {
         setData(json[endpoint] || []);
@@ -31,11 +32,16 @@ export function useAdminApi<T>(endpoint: string) {
   const remove = async (id: string) => {
     try {
       const res = await fetch(`/api/admin/${endpoint}/${id}`, { method: "DELETE" });
-      if (res.ok) {
-        setData((prev) => prev.filter((item: any) => item.id !== id));
+      if (!res.ok) {
+        const json = await res.json().catch(() => null);
+        throw new Error(json?.error || "Delete failed");
       }
+
+      await fetchAll();
     } catch (err) {
       console.error("Delete failed", err);
+      setError(err instanceof Error ? err.message : "Delete failed");
+      throw err;
     }
   };
 

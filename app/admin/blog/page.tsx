@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { Dialog } from "@/components/ui/dialog";
 import { useAdminApi } from "@/hooks/use-admin-api";
 import { AppPhoto } from "@/components/landing/app-photo";
@@ -16,9 +17,14 @@ function formatDate(value: string) {
 }
 
 export default function AdminBlogListPage() {
-  const { data: posts, loading, remove } = useAdminApi<BlogPost>("blogs");
+  const searchParams = useSearchParams();
+  const refreshKey = searchParams.get("refresh");
+  const lastRefreshKey = useRef<string | null>(null);
+  const { data: posts, loading, remove, refresh } = useAdminApi<BlogPost>("blogs");
   const [deleteId, setDeleteId] = useState<string | null>(null);
   const [openMenuId, setOpenMenuId] = useState<string | null>(null);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [deleteError, setDeleteError] = useState("");
 
   // Close menu when clicking elsewhere
   useEffect(() => {
@@ -26,6 +32,15 @@ export default function AdminBlogListPage() {
     window.addEventListener("click", handleGlobalClick);
     return () => window.removeEventListener("click", handleGlobalClick);
   }, []);
+
+  useEffect(() => {
+    if (!refreshKey || refreshKey === lastRefreshKey.current) {
+      return;
+    }
+
+    lastRefreshKey.current = refreshKey;
+    refresh();
+  }, [refresh, refreshKey]);
 
   if (loading) {
     return (
@@ -40,16 +55,29 @@ export default function AdminBlogListPage() {
       <Dialog
         open={Boolean(deleteId)}
         title="Delete blog post?"
-        description="This blog will be permanently removed from your site."
-        confirmLabel="Delete"
+        description={deleteError || "This blog will be permanently removed from your site."}
+        confirmLabel={isDeleting ? "Deleting..." : "Delete"}
         cancelLabel="Cancel"
         tone="danger"
-        onCancel={() => setDeleteId(null)}
-        onConfirm={() => {
-          if (deleteId) {
-            remove(deleteId);
-          }
+        pending={isDeleting}
+        onCancel={() => {
+          if (isDeleting) return;
           setDeleteId(null);
+          setDeleteError("");
+        }}
+        onConfirm={async () => {
+          if (!deleteId || isDeleting) return;
+
+          setIsDeleting(true);
+          setDeleteError("");
+          try {
+            await remove(deleteId);
+            setDeleteId(null);
+          } catch {
+            setDeleteError("Failed to delete the blog post. Please try again.");
+          } finally {
+            setIsDeleting(false);
+          }
         }}
       />
 

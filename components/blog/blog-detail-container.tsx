@@ -48,7 +48,7 @@ export default function BlogDetailContainer({ slug }: { slug: string }) {
     setLoading(true);
     setError(false);
     try {
-      const res = await fetch(`/api/blogs/slug/${slug}`);
+      const res = await fetch(`/api/blogs/slug/${slug}`, { cache: "no-store" });
       if (res.ok) {
         const json = (await res.json()) as { blog?: BlogDetailPost };
         setPost(json.blog ?? null);
