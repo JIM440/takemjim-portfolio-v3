@@ -205,7 +205,7 @@ export const projects: Project[] = [
       {
         title: "Play Store screen 02",
         caption: "Second REEPLS screenshot focused on reading and multimedia story presentation.",
-        src: "/projects/reepls-shot-02.jpg",
+        src: "/projects/reepls-shot-02.png",
         frame: "mobile",
       },
       {
