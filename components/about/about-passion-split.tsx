@@ -1,7 +1,6 @@
 import type { CSSProperties } from "react";
 import { aboutPage } from "@/lib/site-data";
 import { AppPhoto } from "@/components/landing/app-photo";
-import { landingAssets } from "@/lib/figma-landing-assets";
 
 /**
  * Passion section: Headline + Story text on the left, Portrait image on the right.
@@ -37,7 +36,7 @@ export function AboutPassionSplit() {
         <div className="lg:col-span-5 landing-animate-fade [--anim-delay:0.15s] lg:sticky lg:top-32">
           <div className="border border-[color:var(--line)] bg-[color:var(--surface-strong)] p-3 lg:p-4 shadow-sm">
             <AppPhoto
-              src={'/jim/jim2.png'}
+              src="/jim/about.png"
               alt="Takem Jim Portrait"
               className="aspect-[4/5] w-full"
               imgClassName="absolute inset-0 h-full w-full object-cover"

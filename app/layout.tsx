@@ -22,7 +22,7 @@ const bodyFont = Manrope({
 const rootTitle = "Takem Jim- Software Developer";
 const rootDescription =
   "I build web and mobile applications that turn ideas into real, usable products. Got a project? I can help make it happen.";
-const rootImage = "/jim/hero-og.jpg";
+const rootImage = "/jim/about.png";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   icons: {
     icon: [{ url: "/jim.png", type: "image/png" }],
     apple: [{ url: "/jim.png", type: "image/png" }],
-    shortcut: "/jimII.png",
+    shortcut: "/jim.png",
   },
   title: {
     default: rootTitle,

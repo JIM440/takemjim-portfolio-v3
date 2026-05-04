@@ -1,7 +1,7 @@
 /** Remote assets from Figma MCP (node 1:3) — URLs expire after ~7 days per Figma. */
 export const landingAssets = {
   heroPortrait:
-    "/jim/hero-portrait.webp",
+    "/jim/hero-jim.png",
   architecturalDetail:
     "https://www.figma.com/api/mcp/asset/913a4953-e3d2-48fe-b273-ae524f52eb14",
   cleanDeskSetup:
