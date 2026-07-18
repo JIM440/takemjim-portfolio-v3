@@ -379,7 +379,7 @@ export function ProjectDetailView({ project, projectIndex, nextProject }: Projec
       {useNoteLoom ? (
         <section className="project-detail__section">
           <div className="project-detail__wrap">
-            <div className="flex flex-col gap-4 border-b border-[color:var(--line)] pb-10 md:flex-row md:items-end md:justify-between">
+            <div className="flex flex-col gap-4 pb-10 md:flex-row md:items-end md:justify-between">
               <div>
                 <p className="font-[family-name:var(--font-body)] text-[11px] uppercase tracking-[0.24em] text-(--muted)">
                   Landing-aligned case study
@@ -425,7 +425,7 @@ export function ProjectDetailView({ project, projectIndex, nextProject }: Projec
       {usePlayStrip ? (
         <section className="project-detail__gallery">
           <div className="project-detail__wrap">
-            <div className="mb-10 flex flex-col gap-4 border-b border-[color:var(--line)] pb-8 md:flex-row md:items-end md:justify-between">
+            <div className="mb-10 flex flex-col gap-4 pb-8 md:flex-row md:items-end md:justify-between">
               <div>
                 <p className="font-[family-name:var(--font-body)] text-[11px] uppercase tracking-[0.24em] text-(--muted)">
                   Mobile presentation
@@ -471,7 +471,7 @@ export function ProjectDetailView({ project, projectIndex, nextProject }: Projec
       {usePawtaker ? (
         <section className="project-detail__section">
           <div className="project-detail__wrap">
-            <div className="flex flex-col gap-4 border-b border-[color:var(--line)] pb-10 md:flex-row md:items-end md:justify-between">
+            <div className="flex flex-col gap-4 pb-10 md:flex-row md:items-end md:justify-between">
               <div>
                 <p className="font-[family-name:var(--font-body)] text-[11px] uppercase tracking-[0.24em] text-(--muted)">
                   {walkthroughLabel}
@@ -524,7 +524,7 @@ export function ProjectDetailView({ project, projectIndex, nextProject }: Projec
       {useMinimal && showHeroInBuiltSection ? (
         <section className="project-detail__section">
           <div className="project-detail__wrap">
-            <div className="flex flex-col gap-4 border-b border-[color:var(--line)] pb-10 md:flex-row md:items-end md:justify-between">
+            <div className="flex flex-col gap-4 pb-10 md:flex-row md:items-end md:justify-between">
               <div>
                 <p className="font-[family-name:var(--font-body)] text-[11px] uppercase tracking-[0.24em] text-(--muted)">
                   Product Overview
@@ -551,7 +551,7 @@ export function ProjectDetailView({ project, projectIndex, nextProject }: Projec
       {showLegacyGallery ? (
         <section className="project-detail__section">
           <div className="project-detail__wrap">
-            <div className="flex flex-col gap-4 border-b border-[color:var(--line)] pb-10 md:flex-row md:items-end md:justify-between">
+            <div className="flex flex-col gap-4 pb-10 md:flex-row md:items-end md:justify-between">
               <div>
                 <p className="font-[family-name:var(--font-body)] text-[11px] uppercase tracking-[0.24em] text-(--muted)">
                   Product Overview

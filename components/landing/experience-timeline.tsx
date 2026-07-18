@@ -8,7 +8,7 @@ type ExperienceTimelineProps = {
 
 export function ExperienceTimeline({ roles = professionalTimeline }: ExperienceTimelineProps) {
   return (
-    <section className="landing-band landing-band--muted landing-band--ruled py-24 md:py-48">
+    <section className="landing-band landing-band--muted bg-[color:var(--input-bg)] py-24 md:py-48">
       <div className="landing-container landing-animate-fade-up">
         <div className="grid gap-16 lg:grid-cols-12">
           <div className="lg:col-span-4 landing-animate-fade">

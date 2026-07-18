@@ -6,7 +6,7 @@ export function AboutContactBand() {
   const { sectionMark, bandLabel, headlineLead, headlineAccent, description } = aboutPage.contactBand;
 
   return (
-    <section className="border-t border-[color:var(--line-strong)] bg-[color:var(--surface-muted)] [--about-accent:var(--fg-soft)]">
+    <section className="bg-[color:var(--surface-muted)] [--about-accent:var(--fg-soft)]">
       <div className="landing-container py-16 md:py-24 landing-animate-fade-up">
         <div className="flex items-baseline justify-between gap-4 landing-animate-fade">
           <span className="font-[family-name:var(--font-body)] text-sm font-medium tabular-nums text-[color:var(--about-accent)]">

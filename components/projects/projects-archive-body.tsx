@@ -36,7 +36,7 @@ export function ProjectsArchiveBody() {
       {featuredProject ? <WorksFeaturedHero project={featuredProject} /> : null}
 
       <div className="blog-archive-main">
-        <div className="mb-12 max-w-3xl space-y-4 border-b border-[color:var(--line)] pb-10">
+        <div className="mb-12 max-w-3xl space-y-4 pb-10">
           <p className="font-[family-name:var(--font-body)] text-[10px] font-semibold uppercase tracking-[0.28em] text-(--muted)">
             Portfolio
           </p>

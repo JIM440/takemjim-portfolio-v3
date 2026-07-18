@@ -1452,7 +1452,7 @@
   }
 
   .project-detail__stats-band {
-      @apply border-t border-(--line-strong) text-(--fg);
+      @apply text-(--fg);
       padding-block: clamp(2rem, 4vw, 3rem);
     }
 
@@ -1545,7 +1545,7 @@
   }
 
   .project-detail__next {
-    @apply border-t border-(--line-strong) py-20 md:py-32;
+    @apply border-t border-(--line-strong) bg-[color:var(--input-bg)] py-20 md:py-32;
   }
 
   .project-detail__next-inner {

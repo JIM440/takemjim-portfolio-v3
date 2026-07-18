@@ -6,7 +6,7 @@ export function ContactCta() {
   const mailtoHref = `mailto:${profile.email}`;
 
   return (
-    <section className="landing-band border-t border-[color:var(--line)] py-24 md:py-32">
+    <section className="landing-band py-24 md:py-32">
       <div className="landing-container grid w-full gap-10 sm:gap-12 lg:grid-cols-2 lg:gap-14 xl:gap-16">
         <div className="flex min-w-0 flex-col gap-8 sm:gap-10">
           <header>
@@ -71,7 +71,7 @@ export function ContactCta() {
           </nav>
         </div>
 
-        <aside className="min-w-0 border-t border-[color:var(--line)] pt-10 sm:pt-12 lg:border-t-0 lg:pt-0">
+        <aside className="min-w-0 pt-10 sm:pt-12 lg:pt-0">
           <Suspense
             fallback={
               <p className="text-sm text-[color:var(--muted)]" role="status">
