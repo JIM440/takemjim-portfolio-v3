@@ -4,7 +4,7 @@ import { ProjectsArchiveBody } from "@/components/projects/projects-archive-body
 import { WorksProjectCta } from "@/components/projects/works-project-cta";
 
 export const metadata: Metadata = {
-  title: "Works",
+  title: "Solutions I've Crafted",
   description:
     "Portfolio of Takem Jim — software engineer and developer: web platforms, mobile apps, and interface-led product work.",
   alternates: {
@@ -30,3 +30,4 @@ export default function ProjectsPage() {
     </main>
   );
 }
+

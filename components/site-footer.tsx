@@ -6,7 +6,7 @@ export function SiteFooter() {
 
   return (
     <footer className="border-t border-[color:var(--line)] bg-[color:var(--bg)] py-12 md:py-16">
-      <div className="landing-container flex flex-col items-center justify-between gap-8 sm:flex-row sm:gap-6">
+      <div className="landing-container flex flex-col-reverse items-center justify-between gap-8 sm:flex-row sm:gap-6">
         <p className="font-[family-name:var(--font-body)] text-[10px] font-medium uppercase tracking-[0.2em] text-[color:var(--muted)]">
           &copy; <time dateTime={String(year)} suppressHydrationWarning>{year}</time> {profile.name}
         </p>
@@ -50,3 +50,4 @@ export function SiteFooter() {
     </footer>
   );
 }
+

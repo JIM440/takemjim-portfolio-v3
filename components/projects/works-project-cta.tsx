@@ -11,7 +11,7 @@ export function WorksProjectCta() {
           </h2>
           <Link
             href="/contact?intent=project-request&subject=I%20would%20like%20to%20start%20a%20project%20with%20you"
-            className="mt-12 inline-flex items-center gap-4 border border-(--line-strong) bg-transparent px-9 py-5 font-[family-name:var(--font-display)] text-[10px] font-normal uppercase tracking-[0.22em] text-(--fg-soft) transition-opacity hover:opacity-85 sm:px-12 sm:text-[11px]"
+            className="mt-12 inline-flex items-center gap-4 bg-(--fg-soft) px-9 py-5 font-[family-name:var(--font-display)] text-[10px] font-normal uppercase tracking-[0.22em] text-(--bg) transition-opacity hover:opacity-85 sm:px-12 sm:text-[11px]"
           >
             <span>I would like to start a project with you</span>
             <span aria-hidden className="text-base font-light leading-none">
@@ -53,3 +53,4 @@ export function WorksProjectCta() {
     </section>
   );
 }
+

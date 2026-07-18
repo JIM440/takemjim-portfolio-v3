@@ -16,9 +16,6 @@ export function ExperienceTimeline({ roles = professionalTimeline }: ExperienceT
               <span className="block">Professional</span>
               <span className="block">Background</span>
             </h2>
-            <p className="landing-body-sm mt-8 max-w-xs">
-              A curated timeline of professional evolution and systemic impact.
-            </p>
             <div className="mt-10">
               <a
                 href={contactSocial.cvHref}
@@ -59,3 +56,4 @@ export function ExperienceTimeline({ roles = professionalTimeline }: ExperienceT
     </section>
   );
 }
+

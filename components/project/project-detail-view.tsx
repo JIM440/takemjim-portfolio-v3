@@ -218,9 +218,8 @@ function renderShot(
   return (
     <div
       key={key}
-      className={`relative w-full overflow-hidden border border-[color:var(--line)] bg-[color:var(--bg-muted)] ${aspectClass}`}
+      className={`relative w-full overflow-hidden border border-[color:var(--line)] ${aspectClass}`}
     >
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.12),transparent_46%),linear-gradient(180deg,rgba(255,255,255,0.02),rgba(0,0,0,0.08))]" />
       <div className="absolute inset-0 flex flex-col justify-between p-5 md:p-6">
         <p className="font-[family-name:var(--font-body)] text-[11px] uppercase tracking-[0.22em] text-(--muted)">
           Screenshot placeholder
@@ -249,7 +248,6 @@ export function ProjectDetailView({ project, projectIndex, nextProject }: Projec
   const notes = platformNotes(project);
   const mobileLink = mobileDownloadLink(project);
   const screenshots = project.screenshots ?? [];
-  const background = project.background ?? project.summary;
   const journey = project.journey ?? project.spotlight;
   const whatWeDid = project.whatWeDid ?? `Role: ${project.role}. Services: ${project.services.join(", ")}.`;
   const heroSrc = project.heroImage ?? project.images?.[0] ?? screenshots[0]?.src ?? media.hero;
@@ -371,17 +369,6 @@ export function ProjectDetailView({ project, projectIndex, nextProject }: Projec
             <h2 className="project-detail__h2 project-detail__h2--left">The challenge</h2>
             <div className="project-detail__split-body">
               <p className="project-detail__lead">{project.challenge}</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="project-detail__section">
-        <div className="project-detail__wrap">
-          <div className="project-detail__split">
-            <h2 className="project-detail__h2 project-detail__h2--left">Background</h2>
-            <div className="project-detail__split-body">
-              <p className="text-base leading-relaxed text-[color:var(--muted)] md:text-lg">{background}</p>
             </div>
           </div>
         </div>
@@ -727,3 +714,7 @@ export function ProjectDetailView({ project, projectIndex, nextProject }: Projec
     </main>
   );
 }
+
+
+
+

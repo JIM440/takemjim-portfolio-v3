@@ -15,6 +15,9 @@ export function CoreCompetencies() {
         <div className="landing-stack-sm landing-animate-fade">
           <p className="landing-eyebrow">Core competencies</p>
           <h2 className="landing-display-md max-w-[42rem]">Explore my core services</h2>
+          <p className="landing-body-lg max-w-[42rem] text-[color:var(--muted)]">
+            I build products that showcase your business, automate your processes, and bring your ideas to life.
+          </p>
         </div>
 
         <div className="grid gap-12 md:grid-cols-2 xl:grid-cols-3 landing-stagger">
@@ -47,3 +50,4 @@ export function CoreCompetencies() {
     </section>
   );
 }
+

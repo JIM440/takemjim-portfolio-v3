@@ -22,7 +22,7 @@ export default function ContactPage() {
               <header>
                 <p className="section-label">Contact</p>
                 <h1 className="mt-4 max-w-[22ch] font-[family-name:var(--font-display)] text-[clamp(2rem,5vw,3rem)] font-normal leading-[1.1] tracking-tight text-[color:var(--fg-soft)]">
-                  Let&apos;s build something clear, useful, and well-crafted.
+                  Let&apos;s build something clear and useful.
                 </h1>
               </header>
             </div>
@@ -46,3 +46,4 @@ export default function ContactPage() {
     </main>
   );
 }
+

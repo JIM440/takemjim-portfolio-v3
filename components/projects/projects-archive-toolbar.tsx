@@ -10,7 +10,6 @@ export function ProjectsArchiveToolbar({ categories, active }: ProjectsArchiveTo
 
   return (
     <div className="blog-archive-toolbar">
-      <h2 className="blog-archive-toolbar__heading">Works</h2>
       <nav className="blog-archive-toolbar__filters" aria-label="Filter by category">
         <Link
           href="/projects"

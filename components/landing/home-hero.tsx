@@ -5,10 +5,10 @@ import { AppPhoto } from "./app-photo";
 
 export function HomeHero() {
   const heroSentence =
-    "I am a software engineer who builds products with a strong focus on software quality, system design, and clean UI. Take a look at my portfolio, reach out for anything or for a project you have in mind.";
+    "I build web and mobile products that help businesses present themselves clearly, automate everyday processes, and turn ideas into useful software.";
 
   return (
-    <section className="landing-hero flex min-h-screen items-center py-20 lg:max-h-[850px]">
+    <section className="landing-hero flex items-center py-28 md:py-32 lg:py-36">
       <div className="landing-container">
         <div className="grid gap-12 lg:grid-cols-12 lg:items-center lg:gap-16">
           {/* Left Column: Content */}
@@ -26,7 +26,7 @@ export function HomeHero() {
                 href="/contact"
                 className="w-full bg-[color:var(--accent)] px-10 py-5 text-center font-[family-name:var(--font-body)] text-[10px] font-bold uppercase tracking-[0.15em] text-[color:var(--bg)] transition-opacity hover:opacity-90 sm:w-auto"
               >
-                Get in touch
+                Contact me
               </Link>
               <Link
                 href="/projects"
@@ -71,7 +71,7 @@ export function HomeHero() {
 
             {/* Meta Row */}
             <div className="mt-12">
-              <div className="grid grid-cols-3 gap-8">
+              <div className="grid grid-cols-2 gap-8">
                 <div>
                   <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-[color:var(--muted-label)]">Focus</p>
                   <p className="mt-2 text-sm font-medium text-[color:var(--fg)]">Software Development</p>
@@ -80,10 +80,7 @@ export function HomeHero() {
                   <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-[color:var(--muted-label)]">Education</p>
                   <p className="mt-2 text-sm font-medium text-[color:var(--fg)]">Masters</p>
                 </div>
-                <div>
-                  <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-[color:var(--muted-label)]">Base</p>
-                  <p className="mt-2 text-sm font-medium text-[color:var(--fg)]">{profile.location}</p>
-                </div>
+
               </div>
             </div>
           </div>
@@ -112,3 +109,6 @@ export function HomeHero() {
     </section>
   );
 }
+
+
+

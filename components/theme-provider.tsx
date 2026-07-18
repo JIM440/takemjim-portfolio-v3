@@ -8,11 +8,11 @@ export type ThemeOption = "dark" | "light";
 
 export function getPreferredTheme(): ThemeOption {
   if (typeof window === "undefined") {
-    return "dark";
+    return "light";
   }
 
   const stored = window.localStorage.getItem(STORAGE_KEY);
-  return stored === "light" ? "light" : "dark";
+  return stored === "dark" ? "dark" : "light";
 }
 
 export function ThemeProvider() {
@@ -34,3 +34,4 @@ export function setTheme(theme: ThemeOption) {
   document.documentElement.dataset.theme = theme;
   document.documentElement.style.colorScheme = theme;
 }
+

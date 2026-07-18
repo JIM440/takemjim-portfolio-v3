@@ -5,10 +5,10 @@ import { useEffect, useMemo, useState } from "react";
 import { Dialog } from "@/components/ui/dialog";
 
 const fieldBase =
-  "min-w-0 w-full bg-transparent px-0 py-2 text-[color:var(--fg-soft)] outline-none placeholder:text-[color:var(--input-placeholder)] placeholder:opacity-90";
+  "min-w-0 w-full bg-[color:var(--input-bg)] px-4 py-3 text-[color:var(--fg-soft)] outline-none placeholder:text-[color:var(--input-placeholder)] placeholder:opacity-90 transition-shadow focus:shadow-[0_0_0_1px_color-mix(in_oklab,var(--fg)_20%,transparent)]";
 
-const inputUnderline = `${fieldBase} border-b border-[color:var(--line-strong)] focus:border-[color:var(--fg-soft)]`;
-const textareaUnderline = `${fieldBase} resize-none border-b border-[color:var(--line-strong)] focus:border-[color:var(--fg-soft)] overflow-hidden`;
+const inputUnderline = fieldBase;
+const textareaUnderline = `${fieldBase} resize-none overflow-hidden`;
 const MESSAGE_MAX = 500;
 const MESSAGE_MAX_LINES = 8;
 const FIELD_MAX_LINES = 3;
@@ -100,10 +100,7 @@ export function ContactForm() {
         onConfirm={() => setShowSuccessDialog(false)}
         onCancel={() => setShowSuccessDialog(false)}
       />
-
-      <p className="section-label text-left !mb-0">Send a message</p>
-
-      <form onSubmit={onSubmit} className="mt-2 flex w-full flex-col gap-4">
+      <form onSubmit={onSubmit} className="flex w-full flex-col gap-4">
         <input
           type="text"
           name="website"
@@ -203,3 +200,5 @@ export function ContactForm() {
     </div>
   );
 }
+
+

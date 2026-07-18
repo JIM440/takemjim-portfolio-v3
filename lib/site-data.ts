@@ -1,12 +1,11 @@
 export const navigation = [
-  { href: "/projects", label: "Works" },
+  { href: "/projects", label: "Projects" },
   { href: "/about", label: "About" },
-  { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ];
 
 export const featuredMetrics = [
-  { value: "Web", label: "Web products built to feel clear, reliable, and ready for real teams." },
+  { value: "Web", label: "I build web products that present your brand clearly and support the way your team works, from ecommerce websites to business dashboards and management systems." },
   { value: "Mobile", label: "Mobile experiences shaped for smooth flows and everyday use." },
   { value: "Cloud", label: "AI-enabled and cloud-backed systems planned with long-term quality in mind." },
 ];
@@ -19,15 +18,15 @@ export type ServiceOffering = {
 export const serviceOfferings: ServiceOffering[] = [
   {
     title: "Web development",
-    body: "Web products built to feel clear, reliable, and ready for real teams.",
+    body: "I build web products that present your brand clearly and support the way your team works, from ecommerce websites to business dashboards and management systems.",
   },
   {
     title: "Mobile development",
-    body: "Mobile experiences shaped for smooth flows, fast feedback, and everyday use.",
+    body: "I build focused mobile apps for customers, teams, marketplaces, and product ideas that need to feel fast and useful every day.",
   },
   {
     title: "UI/UX Design",
-    body: "Creating user-centered designs that enhance engagement.",
+    body: "I design clean, practical interfaces that help people understand products quickly and move through key tasks with confidence.",
   },
 ];
 
@@ -37,7 +36,7 @@ export const profile = {
   name: "Takem Jim",
   title: "Software Developer",
   heroSentence:
-    "Take a look at my portfolio, reach out for anything or for a project you have in mind.",
+    "I build products that showcase your business, automate your processes, and bring your ideas to life.",
   education:
     "I earned my degree from the Faculty of Engineering and Technology and I am currently pursuing a master's degree in software engineering.",
   approach:
@@ -54,19 +53,19 @@ export const contactSocial = {
   cvHref: "/takem_jim_rawlings_cv.pdf",
   social: [
     { label: "LinkedIn", href: "https://www.linkedin.com/in/takem-jim" },
-    { label: "GitHub", href: "https://github.com/" },
+    { label: "GitHub", href: "https://github.com/jIM440/" },
   ] as const,
 };
 
 export const aboutPage = {
   heroLede:
-    "I am a software engineer based in Buea, Cameroon who is especially drawn to AI and cloud because they turn good product ideas into systems that can adapt, scale, and keep creating value over time.",
+    "I am a software engineer with over 4 years of experience building software products with a strong focus on user experience, software quality, and reliable product delivery.",
   passionSection: {
     headlineLead: "Passionate about",
-    headlineAccent: "AI and cloud",
+    headlineAccent: "AI automation",
     paragraphs: [
-      "I approach these areas with the same mindset I bring to web and mobile work: keep the experience understandable, keep the architecture dependable, and make each layer support the quality of the whole product.",
-      "That mix of curiosity and discipline keeps me interested in intelligent tooling, cloud infrastructure, and system design without losing sight of the people who use the software every day.",
+      "I am passionate about automating business processes with AI and software development, especially when technology can reduce repetitive work and make teams more effective.",
+      "I approach each product with the same mindset: keep the experience understandable, keep the architecture dependable, and make every feature support a real business outcome.",
     ],
   },
   contactBand: {
@@ -78,7 +77,24 @@ export const aboutPage = {
       "I sectively engage with high-impact opportunities that align with my strength in software engineering, AI-aware products, cloud-backed systems, and interface-led delivery.",
   },
 };
+export type EducationTimelineItem = {
+  range: string;
+  degree: string;
+  institution: string;
+};
 
+export const educationTimeline: EducationTimelineItem[] = [
+  {
+    range: "Nov 2021 - July 2025",
+    degree: "BSc Computer Engineering",
+    institution: "University of Buea",
+  },
+  {
+    range: "Nov 2025 - July 2027",
+    degree: "MSc Software Engineering",
+    institution: "In progress",
+  },
+];
 export type ProfessionalTimelineRole = {
   range: string;
   title: string;
@@ -298,7 +314,7 @@ export const projects: Project[] = [
   },
   {
     slug: "internship-management-system",
-    title: "Internship Management System",
+    title: "Internship Management System for InchTechs",
     category: "Web",
     year: "2024",
     summary:
@@ -321,7 +337,7 @@ export const projects: Project[] = [
   },
   {
     slug: "pawtaker",
-    title: "PawTaker - Take them good",
+    title: "PawTaker - Pet Sitting and Care",
     category: "Mobile",
     year: "2025",
     summary:
@@ -367,11 +383,11 @@ export const projects: Project[] = [
   },
   {
     slug: "cost-estimate",
-    title: "Cost Estimate",
+    title: "Cost Estimate - Construction Cost Estimator",
     category: "Mobile",
     year: "2024",
     summary:
-      "A specialized mobile tool designed to help unskilled technicians calculate project estimates and learn the estimation process.",
+      "A construction project cost estimator app designed to help technicians calculate project estimates and learn the estimation process.",
     builtDescription: "Mobile app",
     whatWeMade: "helps unskilled technicians calculate project estimates and learn the estimation process through guided steps.",
     challenge:
@@ -556,3 +572,5 @@ export const blogPosts: BlogPost[] = [
 ];
 
 export const BLOG_ARCHIVE_PAGE_LIMIT = 6;
+
+

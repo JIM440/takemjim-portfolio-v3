@@ -22,7 +22,7 @@ const bodyFont = Manrope({
 const rootTitle = "Takem Jim- Software Developer";
 const rootDescription =
   "I build web and mobile applications that turn ideas into real, usable products. Got a project? I can help make it happen.";
-const rootImage = "/jim/about.png";
+const rootImage = "/jim/takemjim.png";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -95,7 +95,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-theme="dark" suppressHydrationWarning>
+    <html lang="en" data-theme="light" suppressHydrationWarning>
       <body className={`${displayFont.variable} ${bodyFont.variable}`} suppressHydrationWarning>
         <ThemeProvider />
         <PersonJsonLd />
@@ -104,3 +104,4 @@ export default function RootLayout({
     </html>
   );
 }
+

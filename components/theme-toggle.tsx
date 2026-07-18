@@ -8,7 +8,7 @@ type ThemeToggleProps = {
 };
 
 export function ThemeToggle({ className }: ThemeToggleProps) {
-  const [theme, setThemeState] = useState<ThemeOption>("dark");
+  const [theme, setThemeState] = useState<ThemeOption>("light");
 
   useEffect(() => {
     setThemeState(getPreferredTheme());
@@ -33,3 +33,4 @@ export function ThemeToggle({ className }: ThemeToggleProps) {
     </label>
   );
 }
+

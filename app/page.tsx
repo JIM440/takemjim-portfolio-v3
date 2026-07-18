@@ -3,7 +3,6 @@ import { AboutSplit } from "@/components/landing/about-split";
 import { ContactCta } from "@/components/landing/contact-cta";
 import { CoreCompetencies } from "@/components/landing/core-competencies";
 import { HomeHero } from "@/components/landing/home-hero";
-import { QuoteBlock } from "@/components/landing/quote-block";
 import { SelectedWorks } from "@/components/landing/selected-works";
 import { AboutBlogTeaser } from "@/components/about/about-blog-teaser";
 
@@ -22,10 +21,9 @@ export default function HomePage() {
   return (
     <div className="landing-page">
       <HomeHero />
-      <CoreCompetencies />
       <SelectedWorks />
+      <CoreCompetencies />
       <AboutSplit />
-      <QuoteBlock />
       <AboutBlogTeaser />
       <ContactCta />
     </div>

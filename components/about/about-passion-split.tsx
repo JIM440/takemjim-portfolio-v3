@@ -36,7 +36,7 @@ export function AboutPassionSplit() {
         <div className="lg:col-span-5 landing-animate-fade [--anim-delay:0.15s] lg:sticky lg:top-32">
           <div className="border border-[color:var(--line)] bg-[color:var(--surface-strong)] p-3 lg:p-4 shadow-sm">
             <AppPhoto
-              src="/jim/about.png"
+              src="/jim/takemjim.png"
               alt="Takem Jim Portrait"
               className="aspect-[4/5] w-full"
               imgClassName="absolute inset-0 h-full w-full object-cover"
@@ -47,3 +47,4 @@ export function AboutPassionSplit() {
     </section>
   );
 }
+
