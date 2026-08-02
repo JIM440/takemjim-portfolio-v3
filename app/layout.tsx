@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Manrope, Newsreader } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { AppShell } from "@/components/app-shell";
 import { PersonJsonLd } from "@/components/person-json-ld";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -100,6 +101,7 @@ export default function RootLayout({
         <ThemeProvider />
         <PersonJsonLd />
         <AppShell>{children}</AppShell>
+        <Analytics />
       </body>
     </html>
   );
